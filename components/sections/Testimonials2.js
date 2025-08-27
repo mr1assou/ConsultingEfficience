@@ -53,7 +53,7 @@ export default function Testimonials2() {
                                     </div>
                                     <div className="testimonial-item">
                                         <div className="testimonial-header">
-                                            <h6>Quality Services</h6>
+                                            <h6>Service de qualité</h6>
                                             <div className="ratting">
                                                 <i className="fas fa-star" />
                                                 <i className="fas fa-star" />
@@ -77,7 +77,7 @@ export default function Testimonials2() {
                                     </div>
                                     <div className="testimonial-item">
                                         <div className="testimonial-header">
-                                            <h6>Quality Services</h6>
+                                            <h6>Service de qualité</h6>
                                             <div className="ratting">
                                                 <i className="fas fa-star" />
                                                 <i className="fas fa-star" />
