@@ -1,95 +1,85 @@
-"use client"
-import { useState, useEffect } from "react"
-import Preloader from "./Preloader"
+"use client";
+import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+import Preloader from "./Preloader";
 
 export default function FirstVisitPreloader({ children, pageKey }) {
-    const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true);
 
-    useEffect(() => {
-        // Check if this is the first visit to this page
-        const hasVisited = localStorage.getItem(`visited_${pageKey}`)
-        
-        if (hasVisited) {
-            // User has visited before, show content immediately
-            setIsLoading(false)
-            return
-        }
+  useEffect(() => {
+    // Only show preloader on first visit to this page
+    const hasVisited =
+      typeof window !== "undefined"
+        ? localStorage.getItem(`visited_${pageKey}`)
+        : "1";
 
-        // First visit - wait for images to load
-        const waitForImages = () => {
-            // Get all images on the page
-            const images = document.querySelectorAll('img')
-            const imageElements = Array.from(images)
-            
-            if (imageElements.length === 0) {
-                // No images found, show content immediately
-                setTimeout(() => {
-                    setIsLoading(false)
-                    localStorage.setItem(`visited_${pageKey}`, 'true')
-                }, 500)
-                return
-            }
-
-            let loadedCount = 0
-            const totalImages = imageElements.length
-
-            const checkImageLoad = (img) => {
-                if (img.complete && img.naturalHeight !== 0) {
-                    // Image already loaded
-                    loadedCount++
-                    if (loadedCount === totalImages) {
-                        setTimeout(() => {
-                            setIsLoading(false)
-                            localStorage.setItem(`visited_${pageKey}`, 'true')
-                        }, 500)
-                    }
-                } else {
-                    // Image not loaded yet, add event listeners
-                    img.addEventListener('load', () => {
-                        loadedCount++
-                        if (loadedCount === totalImages) {
-                            setTimeout(() => {
-                                setIsLoading(false)
-                                localStorage.setItem(`visited_${pageKey}`, 'true')
-                            }, 500)
-                        }
-                    })
-                    img.addEventListener('error', () => {
-                        loadedCount++
-                        if (loadedCount === totalImages) {
-                            setTimeout(() => {
-                                setIsLoading(false)
-                                localStorage.setItem(`visited_${pageKey}`, 'true')
-                            }, 500)
-                        }
-                    })
-                }
-            }
-
-            imageElements.forEach(checkImageLoad)
-        }
-
-        // Wait for DOM to be ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', waitForImages)
-        } else {
-            waitForImages()
-        }
-
-        // Fallback: if images take too long, show content anyway
-        const timeout = setTimeout(() => {
-            setIsLoading(false)
-            localStorage.setItem(`visited_${pageKey}`, 'true')
-        }, 10000) // 10 seconds timeout
-
-        return () => {
-            clearTimeout(timeout)
-        }
-    }, [pageKey])
-
-    if (isLoading) {
-        return <Preloader />
+    if (hasVisited) {
+      setIsLoading(false);
+      return;
     }
 
-    return children
+    const finish = () => {
+      setIsLoading(false);
+      try {
+        localStorage.setItem(`visited_${pageKey}`, "true");
+      } catch {}
+    };
+
+    // If everything is already loaded
+    if (typeof document !== "undefined" && document.readyState === "complete") {
+      const id = setTimeout(finish, 300);
+      return () => clearTimeout(id);
+    }
+
+    // Wait for the whole page (all resources) to load
+    window.addEventListener("load", finish);
+
+    // Fallback: don't block forever
+    const timeoutId = setTimeout(finish, 10000);
+
+    return () => {
+      window.removeEventListener("load", finish);
+      clearTimeout(timeoutId);
+    };
+  }, [pageKey]);
+
+  // Prevent background scrolling while loading
+  useEffect(() => {
+    if (!isLoading) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [isLoading]);
+
+  return (
+    <>
+      {/* Always render children so their assets can load */}
+      {children}
+
+      {/* Fullscreen overlay while loading */}
+      {isLoading && (
+        <div
+          style={{
+            position: "fixed",
+            inset: 0,
+            zIndex: 9999,
+            background: "#0b0b0b",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+          aria-hidden="true"
+        >
+          <Preloader />
+        </div>
+      )}
+    </>
+  );
 }
+
+FirstVisitPreloader.propTypes = {
+  children: PropTypes.node.isRequired,
+  pageKey: PropTypes.string.isRequired,
+};
