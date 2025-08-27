@@ -9,16 +9,16 @@ import "/public/assets/css/nice-select.min.css"
 import "/public/assets/css/slick.min.css"
 import "/public/assets/css/style.css"
 
-import { Playfair, Plus_Jakarta_Sans } from 'next/font/google'
+import { Playfair_Display, Plus_Jakarta_Sans } from 'next/font/google'
 
-const playfair = Playfair({
-    weight: ['300', '400', '500', '600', '700'],
+const playfair = Playfair_Display({
+    weight: ['400', '700'],
     subsets: ['latin'],
     variable: "--script-font",
     display: 'swap',
 })
 const jakarta = Plus_Jakarta_Sans({
-    weight: ['300', '400', '500', '600', '700'],
+    weight: ['400', '600'],
     subsets: ['latin'],
     variable: "--base-font",
     display: 'swap',
