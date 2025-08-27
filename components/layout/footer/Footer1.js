@@ -39,7 +39,7 @@ export default function Footer1() {
                             <div className="footer-widget widget-text wow fadeInUp delay-0-5s">
                                 <div className="text">
                                     <p>France - Benelux</p>
-                                    <Link href="mailto:contact@bjorn.com">rmimche@efficienceconsulting.fr</Link><br />
+                                    <Link href="/contact">Contactez-Nous</Link><br />
                                     <Link href="/contact">+33 6 50 10 36 59</Link>
                                 </div>
                             </div>
