@@ -8,6 +8,8 @@ import Link from "next/link"
 import { useState } from "react"
 import Lightbox from 'react-18-image-lightbox'
 import 'react-18-image-lightbox/style.css'
+import PagePreloader from "@/components/elements/PagePreloader"
+
 const CounterUp = dynamic(() => import('@/components/elements/CounterUp'), {
     ssr: false,
 })
@@ -45,8 +47,7 @@ export default function ServiceDetails() {
         setIsOpen(false)
     }
     return (
-        <>
-
+        <PagePreloader>
             <Layout headerStyle={1} footerStyle={1}>
                 <section className="page-banner-area pt-135 rpt-95 pb-110 rpb-70 rel z-1 bgs-cover" style={{ backgroundImage: 'url(assets/images/background/banner-bg.png)' }}>
                     <div className="container">
@@ -234,6 +235,6 @@ export default function ServiceDetails() {
                 </div>
 
             </Layout>
-        </>
+        </PagePreloader>
     )
 }

@@ -5,6 +5,7 @@ import Layout from "@/components/layout/Layout"
 import dynamic from 'next/dynamic'
 import Link from "next/link"
 import ServicesThree2 from "@/components/sections/ServicesThree2"
+
 const CounterUp = dynamic(() => import('@/components/elements/CounterUp'), {
     ssr: false,
 })

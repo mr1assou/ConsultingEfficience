@@ -2,11 +2,11 @@
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
 import { FaRocket, FaWhatsapp } from "react-icons/fa";
+
 export default function Contact() {
 
     return (
         <>
-
             <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Contact Us">
                 <div>
                     <section className="contact-page py-140 rpy-100 rel z-1">

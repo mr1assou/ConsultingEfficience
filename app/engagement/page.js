@@ -1,11 +1,11 @@
 import Testimonials3 from "@/components/sections/Testimonials3"
 import Layout from "@/components/layout/Layout"
 import Image from "next/image"
+
 export default function Portfolio() {
 
     return (
         <>
-
             <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Nos Engagements">
                 <div>
                     <section id="about" className="about-area bgc-black py-145 rpy-100 rel z-1">
