@@ -4,7 +4,7 @@ export default function ServicesThree2() {
   return (
     <>
       <section
-        className="services-area-three py-130 rpy-100 rel z-1"
+        className="services-area-three py-130 rpy-100 rel z-1 gap-10"
         style={{ backgroundImage: 'url(assets/images/services/service-bg.png)' }}
       >
         <div className="container">
@@ -26,7 +26,7 @@ export default function ServicesThree2() {
         </div>
 
         <div className="container container-1450">
-          <div className="row justify-content-center">
+          <div className="row justify-content-center g-5">
 
             {/* CARD: Formation */}
             <div className="col-xl-4 col-lg-5 col-md-6 col-sm-8">

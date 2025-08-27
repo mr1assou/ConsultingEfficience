@@ -26,6 +26,11 @@ const jakarta = Plus_Jakarta_Sans({
 
 export const metadata = {
     title: 'Agincy - Digital Agency Nextjs Template',
+    icons: {
+        icon: '/favicon.ico',
+        shortcut: '/favicon.ico',
+        apple: '/favicon.ico',
+    },
 }
 
 export default function RootLayout({ children }) {
