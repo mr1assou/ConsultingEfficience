@@ -1,5 +1,6 @@
 import Testimonials3 from "@/components/sections/Testimonials3"
 import Layout from "@/components/layout/Layout"
+import Image from "next/image"
 export default function Portfolio() {
 
     return (
@@ -11,7 +12,7 @@ export default function Portfolio() {
                         <div className="container">
                             <div className="row justify-content-between g-5">
                                 <div className="col-lg-6">
-                                    <img src="/assets/images/hero/eng.png" alt="Hero" />
+                                    <Image src="/assets/images/hero/eng.png" alt="Hero" width={700} height={380}/>
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="about-content wow fadeInRight delay-0-2s">

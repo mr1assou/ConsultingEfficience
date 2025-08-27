@@ -1,5 +1,5 @@
 
-import Headline3 from "./Headline3"
+import Image from "next/image"
 import VideoPopup from "../elements/VideoPopup"
 
 export default function Video2() {
@@ -47,7 +47,7 @@ export default function Video2() {
                             </span>
                         </div>
                         <div className="video-shape wow zoomIn delay-0-2s">
-                            <img src="/assets/images/video/video-shape.png" alt="Shape" />
+                            <Image src="/assets/images/video/video-shape.png" alt="Shape" fill/>
                         </div>
                     </div>
                 </div>

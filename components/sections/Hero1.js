@@ -1,6 +1,7 @@
 
 import VideoPopup from "../elements/VideoPopup"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Hero1() {
     return (
@@ -25,15 +26,15 @@ export default function Hero1() {
                         <div className="col-lg-6">
                             <div className="hero-image-part">
                                 <div className="hero-main-img wow fadeInRight delay-0-2s">
-                                    <img src="/assets/images/hero/hero-main.png" alt="Hero" />
+                                    <Image src="/assets/images/hero/hero-main.png" alt="Hero" width={700} height={380}/>
                                     {/* <VideoPopup  style={1}/> */}
                                 </div>
                                 <div className="mail-us wow fadeInRight delay-0-4s">
                                     <i className="far fa-at" />
                                     <Link href="/contact">Contactez-Nous</Link>
-                                </div>
+                               </div>
                                 <div className="hero-small-img wow fadeInDown delay-0-6s">
-                                    <img src="/assets/images/hero/hero-small.png" alt="Hero" />
+                                    <Image src="/assets/images/hero/hero-small.png" alt="Hero" width={350} height={150}/>
                                 </div>
                             </div>
                         </div>
