@@ -247,7 +247,6 @@ export default function About() {
                     <div className="lets-talk-area text-center bgs-cover pt-120 pb-130 rpy-90" style={{ backgroundImage: 'url(assets/images/background/tets-talk.jpg)' }}>
                         <div className="container">
                             <Link href="/contact" className="lets-talk-text mb-50 wow zoomIn delay-0-2s">Contactez -<span>Nous</span> <i className="fal fa-arrow-right" /></Link>
-                            <h5 className="talk-to-email"><Link href="/contact">Contact us</Link> or send an <span>email to</span> info@Mehedii.com</h5>
                         </div>
                     </div>
                     {/* Lets Talk Area end */}
