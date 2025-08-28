@@ -54,10 +54,7 @@ export default function ServiceDetails() {
                     <div className="container">
                         <div className="banner-inner text-white wow fadeInUp delay-0-2s">
                             <nav aria-label="breadcrumb">
-                                <ol className="breadcrumb">
-                                    <li className="breadcrumb-item"><Link href="/">Home</Link></li>
-                                    <li className="breadcrumb-item active">Nos Formations</li>
-                                </ol>
+                               
                             </nav>
                             <h1 className="page-title style-two">Nos Formations</h1>
                         </div>
@@ -65,10 +62,16 @@ export default function ServiceDetails() {
                 </section>
 
                 <div className="service-images-area">
-                    <div className="d-flex">
+                    <div className="d-flex flex-column flex-md-row">
                         {images.map((image, index) => (
                             <a onClick={() => openLightbox(index)} key={index}>
-                                <Image width={490} height={277} priority src={image.url} alt="Gallery" />
+                                <Image
+                                    width={490}
+                                    height={277}
+                                    src={image.url}
+                                    alt="Gallery"
+                                    className="img-fluid"
+                                />
                             </a>
                         ))}
                         {isOpen && (
@@ -77,23 +80,17 @@ export default function ServiceDetails() {
                                 nextSrc={images[(photoIndex + 1) % images.length].url}
                                 prevSrc={images[(photoIndex + images.length - 1) % images.length].url}
                                 onCloseRequest={closeLightbox}
-                                onMovePrevRequest={() => setPhotoIndex((photoIndex + images.length - 1) % images.length)}
-                                onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % images.length)}
-                            // imageTitle={images[photoIndex].title}
-                            // imageCaption={images[photoIndex].description}
+                                onMovePrevRequest={() =>
+                                    setPhotoIndex((photoIndex + images.length - 1) % images.length)
+                                }
+                                onMoveNextRequest={() =>
+                                    setPhotoIndex((photoIndex + 1) % images.length)
+                                }
                             />
                         )}
-                        {/* <Link href="/assets/images/services/service-details1.jpg" className="image wow fadeInUp delay-0-2s">
-                                <img src="/assets/images/services/service-details1.jpg" alt="Services" />
-                            </Link>
-                            <Link href="/assets/images/services/service-details2.jpg" className="image wow fadeInUp delay-0-3s">
-                                <img src="/assets/images/services/service-details2.jpg" alt="Services" />
-                            </Link>
-                            <Link href="/assets/images/services/service-details3.jpg" className="image wow fadeInUp delay-0-4s">
-                                <img src="/assets/images/services/service-details3.jpg" alt="Services" />
-                            </Link> */}
                     </div>
                 </div>
+
                 {/* Service images Area end */}
                 {/* Service Counter Area start */}
                 <div className="service-counter-area py-35">
@@ -180,7 +177,7 @@ export default function ServiceDetails() {
                                         <div className="icon"><i className="fal fa-phone-volume" /></div>
                                         <h4>Besoin d’une formation<br />sur mesure ?</h4>
                                         <span className="sub-title">Appelez-nous à tout moment</span>
-                                        <Link href="/callto:+(2)871382023" className="theme-btn style-two w-100">+336- 5010 - 3659</Link>
+                                        <Link href="/contact" className="theme-btn style-two w-100">+336- 5010 - 3659</Link>
                                     </div>
                                     <h4 className="service-title">Contactez-nous</h4>
                                     <div className="widget widget-form wow fadeInUp delay-0-2s">
