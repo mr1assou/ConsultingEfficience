@@ -14,7 +14,7 @@ export default function Hero1() {
                                 <h1 className="wow fadeInUp delay-0-2s">Consulting<i className="fas fa-star-of-life" /></h1>
                                 <div className="hero-sub-heading wow fadeInUp delay-0-4s">
                                     <VideoPopup style={1} />
-                                    <span className="agency-text">Agency</span>
+                                    <span className="agency-text">Agence</span>
                                 </div>
                                 <div className="text wow fadeInUp delay-0-6s">
                                     Accompagnements premium sur mesure
