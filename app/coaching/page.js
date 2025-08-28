@@ -126,7 +126,7 @@ export default function ServiceDetails() {
                                     <h3>COACHING</h3>
                                     <p className="sub-title">Un accompagnement sur mesure pour développer vos talents et votre potentiel</p>
 
-                                    <h4>Leadership 16</h4>
+                                    <h4>Leadership</h4>
                                     <p>
                                         Un parcours conçu pour renforcer vos capacités de leadership à travers 16 modules pratiques.
                                         L’objectif est de vous donner les outils nécessaires pour inspirer, mobiliser et conduire vos équipes
