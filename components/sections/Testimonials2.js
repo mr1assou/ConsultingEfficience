@@ -1,5 +1,6 @@
 'use client'
 import Slider from "react-slick"
+import Image from "next/image"
 
 const settings = {
     slidesToShow: 1,
@@ -22,11 +23,11 @@ export default function Testimonials2() {
                         <div className="row align-items-center justify-content-between">
                             <div className="col-lg-3 wow fadeInRight delay-0-2s">
                                 <div className="testimonials-image rmb-55">
-                                    <img src="/assets/images/testimonials/testemo.png" alt="Testimonials" />
+                                    <Image width={400} height={500} priority src="/assets/images/testimonials/testemo.png" alt="Testimonials" />
                                 </div>
                             </div>
                             <div className="col-xl-8 col-lg-9 wow fadeInLeft delay-0-2s">
-                                <Slider {...settings} className="testimonials-two-active">
+                                <Slider {...settings} className="">
                                     <div className="testimonial-item">
                                         <div className="testimonial-header">
                                             <h6>Service de qualité</h6>

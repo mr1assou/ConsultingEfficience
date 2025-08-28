@@ -9,6 +9,7 @@ import { useState } from "react"
 import Lightbox from 'react-18-image-lightbox'
 import 'react-18-image-lightbox/style.css'
 import PagePreloader from "@/components/elements/PagePreloader"
+import Image from "next/image"
 
 const CounterUp = dynamic(() => import('@/components/elements/CounterUp'), {
     ssr: false,
@@ -67,7 +68,7 @@ export default function ServiceDetails() {
                     <div className="d-flex">
                         {images.map((image, index) => (
                             <a onClick={() => openLightbox(index)} key={index}>
-                                <img src={image.url} alt="Gallery" />
+                                <Image width={490} height={277} priority src={image.url} alt="Gallery" />
                             </a>
                         ))}
                         {isOpen && (

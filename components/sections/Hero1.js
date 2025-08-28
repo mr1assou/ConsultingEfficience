@@ -26,7 +26,7 @@ export default function Hero1() {
                         <div className="col-lg-6">
                             <div className="hero-image-part">
                                 <div className="hero-main-img wow fadeInRight delay-0-2s">
-                                    <Image src="/assets/images/hero/hero-main.png" alt="Hero" width={700} height={380}/>
+                                    <Image src="/assets/images/hero/hero-main.png" alt="Hero" width={700} height={380} priority/>
                                     {/* <VideoPopup  style={1}/> */}
                                 </div>
                                 <div className="mail-us wow fadeInRight delay-0-4s">
@@ -34,7 +34,7 @@ export default function Hero1() {
                                     <Link href="/contact">Contactez-Nous</Link>
                                </div>
                                 <div className="hero-small-img wow fadeInDown delay-0-6s">
-                                    <Image src="/assets/images/hero/hero-small.png" alt="Hero" width={350} height={150}/>
+                                    <Image src="/assets/images/hero/hero-small.png" alt="Hero" width={350} height={150} priority/>
                                 </div>
                             </div>
                         </div>

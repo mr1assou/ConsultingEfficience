@@ -1,5 +1,6 @@
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Blog2() {
   return (
@@ -157,6 +158,34 @@ export default function Blog2() {
           </div>
           {/* Lets Talk Area end */}
 
+          {/* Headline area start */}
+          <div className="headline-area bgc-primary py-20">
+            <div className="headline-wrap style-two color-black">
+              <span className="marquee-wrap">
+                <span className="marquee-inner left">
+                  <span className="marquee-item"><b>Prospection & Vente</b><i className="fas fa-bahai" /></span>
+                  <span className="marquee-item"><b>Négociation</b><i className="fas fa-bahai" /></span>
+                  <span className="marquee-item"><b>Management</b><i className="fas fa-bahai" /></span>
+                  <span className="marquee-item"><b>Communication & Influence</b><i className="fas fa-bahai" /></span>
+                  <span className="marquee-item"><b>Développement personnel</b><i className="fas fa-bahai" /></span>
+                </span>
+                <span className="marquee-inner left">
+                  <span className="marquee-item"><b>Leadership</b><i className="fas fa-bahai" /></span>
+                  <span className="marquee-item"><b>Posture professionnelle</b><i className="fas fa-bahai" /></span>
+                  <span className="marquee-item"><b>Croissance personnelle</b><i className="fas fa-bahai" /></span>
+                  <span className="marquee-item"><b>Mieux-être durable</b><i className="fas fa-bahai" /></span>
+                  <span className="marquee-item"><b>Négociation</b><i className="fas fa-bahai" /></span>
+                </span>
+                <span className="marquee-inner left">
+                  <span className="marquee-item"><b>Prospection & Vente</b><i className="fas fa-bahai" /></span>
+                  <span className="marquee-item"><b>Management</b><i className="fas fa-bahai" /></span>
+                  <span className="marquee-item"><b>Communication & Influence</b><i className="fas fa-bahai" /></span>
+                  <span className="marquee-item"><b>Développement personnel</b><i className="fas fa-bahai" /></span>
+                  <span className="marquee-item"><b>Leadership</b><i className="fas fa-bahai" /></span>
+                </span>
+              </span>
+            </div>
+          </div>
           {/* Headline Area end */}
         </div>
       </Layout>

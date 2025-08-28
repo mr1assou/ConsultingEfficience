@@ -33,7 +33,7 @@ export default function ServicesThree2() {
             <div className="col-xl-4 col-lg-5 col-md-6 col-sm-8">
               <Link href="/formation" className="service-style-three wow fadeInUp delay-0-2s">
                 <div className="image">
-                  <img src="/assets/images/services/service1.png" alt="Service" />
+                  <Image src="/assets/images/services/service1.png" width={370} height={277}  priority alt="Service" />
                 </div>
 
                 {/* was <Link> —> replace by span/button to avoid nested anchors */}
@@ -62,7 +62,7 @@ export default function ServicesThree2() {
             <div className="col-xl-4 col-lg-5 col-md-6 col-sm-8">
               <Link href="/coaching" className="service-style-three wow fadeInUp delay-0-3s">
                 <div className="image">
-                  <img src="/assets/images/services/service2.jpg" alt="Service" />
+                  <Image src="/assets/images/services/service2.jpg" width={370} height={277} priority alt="Service" />
                 </div>
 
                 {/* was <Link> —> replace by span */}
@@ -72,7 +72,7 @@ export default function ServicesThree2() {
 
                 <div className="hover-content">
                   <div className="icon">
-                    <img src="/assets/images/icons/development-2.png" alt="Icon" />
+                    <img src="/assets/images/icons/development-2.png"  priority alt="Icon" />
                   </div>
                   <h6>Coaching</h6>
                 </div>

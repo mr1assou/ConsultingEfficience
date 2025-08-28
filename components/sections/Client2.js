@@ -1,5 +1,6 @@
 
 import Accordion from "../elements/Accordion"
+import Image from "next/image"
 
 export default function Client2() {
     return (
@@ -10,20 +11,20 @@ export default function Client2() {
                         <h2 style={{ color: 'var(--primary-color)' }}>Notre Partenaires</h2>
                     </div>
                     <div className="our-clients-two wow fadeInUp delay-0-4s">
-                        <img src="/assets/images/client-logos/client-logo12.png" alt="Client Logo" style={{ width: "150px" }} />
-                        <img src="/assets/images/client-logos/client-logo13.png" alt="Client Logo" style={{ width: "150px" }} />
-                        <img src="/assets/images/client-logos/client-logo14.png" alt="Client Logo" style={{ width: "150px" }} />
-                        <img src="/assets/images/client-logos/client-logo15.png" alt="Client Logo" style={{ width: "150px" }} />
-                        <img src="/assets/images/client-logos/client-logo16.png" alt="Client Logo" style={{ width: "150px" }} />
-                        <img src="/assets/images/client-logos/client-logo17.png" alt="Client Logo" style={{ width: "150px" }} />
-                        <img src="/assets/images/client-logos/client-logo18.png" alt="Client Logo" style={{ width: "150px" }} />
-                        <img src="/assets/images/client-logos/client-logo19.png" alt="Client Logo" style={{ width: "150px" }} />
-                        <img src="/assets/images/client-logos/client-logo20.png" alt="Client Logo" style={{ width: "150px" }} />
-                        <img src="/assets/images/client-logos/client-logo21.png" alt="Client Logo" style={{ width: "150px" }} />
-                        <img src="/assets/images/client-logos/client-logo22.png" alt="Client Logo" style={{ width: "150px" }} />
-                        <img src="/assets/images/client-logos/client-logo23.png" alt="Client Logo" style={{ width: "150px" }} />
-                        <img src="/assets/images/client-logos/client-logo24.png" alt="Client Logo" style={{ width: "150px" }} />
-                        <img src="/assets/images/client-logos/client-logo25.png" alt="Client Logo" style={{ width: "150px" }} />
+                        <Image width={100} height={120}  priority src="/assets/images/client-logos/client-logo12.png" alt="Client Logo" style={{ width: "150px" }} />
+                        <Image width={100} height={120}  priority src="/assets/images/client-logos/client-logo13.png" alt="Client Logo" style={{ width: "150px" }} />
+                        <Image width={100} height={120}  priority src="/assets/images/client-logos/client-logo14.png" alt="Client Logo" style={{ width: "150px" }} />
+                        <Image width={100} height={120}  priority src="/assets/images/client-logos/client-logo15.png" alt="Client Logo" style={{ width: "150px" }} />
+                        <Image width={100} height={120}  priority src="/assets/images/client-logos/client-logo16.png" alt="Client Logo" style={{ width: "150px" }} />
+                        <Image width={100} height={120}  priority src="/assets/images/client-logos/client-logo17.png" alt="Client Logo" style={{ width: "150px" }} />
+                        <Image width={100} height={120}  priority src="/assets/images/client-logos/client-logo18.png" alt="Client Logo" style={{ width: "150px" }} />
+                        <Image width={100} height={120}  priority src="/assets/images/client-logos/client-logo19.png" alt="Client Logo" style={{ width: "150px" }} />
+                        <Image width={100} height={120}  priority src="/assets/images/client-logos/client-logo20.png" alt="Client Logo" style={{ width: "150px" }} />
+                        <Image width={100} height={120}  priority src="/assets/images/client-logos/client-logo21.png" alt="Client Logo" style={{ width: "150px" }} />
+                        <Image width={100} height={120}  priority src="/assets/images/client-logos/client-logo22.png" alt="Client Logo" style={{ width: "150px" }} />
+                        <Image width={100} height={120}  priority src="/assets/images/client-logos/client-logo23.png" alt="Client Logo" style={{ width: "150px" }} />
+                        <Image width={100} height={120}  priority src="/assets/images/client-logos/client-logo24.png" alt="Client Logo" style={{ width: "150px" }} />
+                        <Image width={100} height={120}  priority src="/assets/images/client-logos/client-logo25.png" alt="Client Logo" style={{ width: "150px" }} />
                     </div>
                 </div>
             </div>
@@ -31,29 +32,7 @@ export default function Client2() {
                 <div className="faq-section-inner rel">
                     <div className="faq-image-part bgs-cover" style={{ backgroundImage: 'url(assets/images/faqs/faq.png)' }}>
                         <div className="headline-wrap style-three color-black">
-                            <span className="marquee-wrap bg-white py-15">
-                                <span className="marquee-inner left">
-                                    <span className="marquee-item"><b>customer business solution</b><i className="fas fa-bahai" /></span>
-                                    <span className="marquee-item"><b><span>design</span> - customer centric solution</b><i className="fas fa-bahai" /></span>
-                                    <span className="marquee-item"><b>web development based company</b><i className="fas fa-bahai" /></span>
-                                    <span className="marquee-item"><b><span>design</span> - customer centric solution</b><i className="fas fa-bahai" /></span>
-                                    <span className="marquee-item"><b>marketing based devlopment</b><i className="fas fa-bahai" /></span>
-                                </span>
-                                <span className="marquee-inner left">
-                                    <span className="marquee-item"><b>customer business solution</b><i className="fas fa-bahai" /></span>
-                                    <span className="marquee-item"><b><span>design</span> - customer centric solution</b><i className="fas fa-bahai" /></span>
-                                    <span className="marquee-item"><b>web development based company</b><i className="fas fa-bahai" /></span>
-                                    <span className="marquee-item"><b><span>design</span> - customer centric solution</b><i className="fas fa-bahai" /></span>
-                                    <span className="marquee-item"><b>marketing based devlopment</b><i className="fas fa-bahai" /></span>
-                                </span>
-                                <span className="marquee-inner left">
-                                    <span className="marquee-item"><b>customer business solution</b><i className="fas fa-bahai" /></span>
-                                    <span className="marquee-item"><b><span>design</span> - customer centric solution</b><i className="fas fa-bahai" /></span>
-                                    <span className="marquee-item"><b>web development based company</b><i className="fas fa-bahai" /></span>
-                                    <span className="marquee-item"><b><span>design</span> - customer centric solution</b><i className="fas fa-bahai" /></span>
-                                    <span className="marquee-item"><b>marketing based devlopment</b><i className="fas fa-bahai" /></span>
-                                </span>
-                            </span>
+                            
                         </div>
                     </div>
                     <div className="container">

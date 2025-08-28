@@ -9,6 +9,7 @@ import { useState } from "react"
 import Lightbox from 'react-18-image-lightbox'
 import 'react-18-image-lightbox/style.css'
 import PagePreloader from "@/components/elements/PagePreloader"
+import Image from "next/image"
 
 const CounterUp = dynamic(() => import('@/components/elements/CounterUp'), {
     ssr: false,
@@ -70,7 +71,7 @@ export default function ServiceDetails() {
                             //     <img src={image.url} alt="Gallery" />
                             // </a>
                             <a onClick={() => openLightbox(index)} key={index} className="image wow fadeInUp delay-0-2s">
-                                <img src={image.url} alt="Services" />
+                                <Image width={490} height={277} priority src={image.url} alt="Services" />
                             </a>
                         ))}
                         {isOpen && (

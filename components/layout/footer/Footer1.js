@@ -22,7 +22,7 @@ export default function Footer1() {
                                     <li><Link href="/formation">Formation</Link></li>
                                     <li><Link href="/coaching">Coaching</Link></li>
                                     <li><Link href="/expertise_financiere">Expertise financière</Link></li>
-                                    <li><Link href="/actualite">ACTUALITÉS</Link></li>
+                                    <li><Link href="/actualite">Actualités</Link></li>
                                 </ul>
                             </div>
                         </div>

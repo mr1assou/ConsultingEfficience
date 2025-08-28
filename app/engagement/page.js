@@ -12,7 +12,7 @@ export default function Portfolio() {
                         <div className="container">
                             <div className="row justify-content-between g-5">
                                 <div className="col-lg-6">
-                                    <Image src="/assets/images/hero/eng.png" alt="Hero" width={700} height={380}/>
+                                    <Image src="/assets/images/hero/eng.png" alt="Hero" width={700} height={380} priority/>
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="about-content wow fadeInRight delay-0-2s">
@@ -48,7 +48,7 @@ export default function Portfolio() {
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
-                                    <img src="/assets/images/hero/eng2.png" alt="Hero" />
+                                    <Image width={700} height={380} priority src="/assets/images/hero/eng2.png" alt="Hero" />
                                 </div>
                             </div>
                         </div>
@@ -57,7 +57,7 @@ export default function Portfolio() {
                         <div className="container">
                             <div className="row justify-content-between g-5">
                                 <div className="col-lg-6">
-                                    <img src="/assets/images/hero/eng3.png" alt="Hero" />
+                                    <Image width={700} height={380} priority src="/assets/images/hero/eng3.png" alt="Hero" />
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="about-content wow fadeInRight delay-0-2s">

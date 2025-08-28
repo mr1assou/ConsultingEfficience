@@ -1,5 +1,5 @@
 
-import Link from "next/link"
+import Image from "next/image"
 
 export default function About1() {
     return (
@@ -40,10 +40,13 @@ export default function About1() {
                         {/* Image */}
                         <div className="col-lg-6">
                             <div className="wow fadeInLeft delay-0-2s">
-                                <img
+                                <Image
                                     src="/assets/images/hero/ryad.jpg"
                                     alt="Client Logo"
                                     className="img-fluid custom-img"
+                                    width={400}
+                                    height={600}
+                                    priority
                                 />
                             </div>
                         </div>

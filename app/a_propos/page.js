@@ -5,7 +5,7 @@ import Layout from "@/components/layout/Layout"
 import dynamic from 'next/dynamic'
 import Link from "next/link"
 import ServicesThree2 from "@/components/sections/ServicesThree2"
-
+import Image from "next/image"
 const CounterUp = dynamic(() => import('@/components/elements/CounterUp'), {
     ssr: false,
 })
@@ -35,7 +35,7 @@ export default function About() {
                                 </div>
                                 <div className="col-lg-4 wow fadeInRight delay-0-2s">
                                     <div className="about-hero-image">
-                                        <img src="/assets/images/testimonials/heho.png" alt="Testimonials" style={{ height: "900px;" }} />
+                                        <Image width={600} height={870} priority src="/assets/images/testimonials/heho.png" alt="Testimonials" style={{ height: "900px;" }} />
                                     </div>
                                 </div>
                             </div>

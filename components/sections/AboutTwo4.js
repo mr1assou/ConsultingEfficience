@@ -1,5 +1,6 @@
 
 import Link from "next/link"
+import Image from "next/image"
 
 export default function AboutTwo4() {
     return (
@@ -13,7 +14,7 @@ export default function AboutTwo4() {
                                     <img src="/assets/images/shapes/experience-corner.jpg" alt="Shape" />
                                 </div>
                                 <div className="image">
-                                    <img src="/assets/images/about/about-three.png" alt="About" />
+                                    <Image width={550} height={600} priority src="/assets/images/about/about-three.png" alt="About" />
                                 </div>
                             </div>
                         </div>
@@ -126,7 +127,7 @@ export default function AboutTwo4() {
                             <div className="about-three-images mb-50">
                               
                                 <div className="image">
-                                    <img src="/assets/images/about/experience-corner.png" alt="About" />
+                                    <Image width={550} height={600} priority src="/assets/images/about/experience-corner.png" alt="About" />
                                 </div>
                             </div>
                         </div>
@@ -136,14 +137,14 @@ export default function AboutTwo4() {
                             <div className="about-three-images mb-50">
                             
                                 <div className="image">
-                                    <img src="/assets/images/about/sn.png" alt="About" />
+                                    <Image width={550} height={600} priority src="/assets/images/about/sn.png" alt="About" />
                                 </div>
                             </div>
                         </div>
                         <div className="col-xl-6 wow fadeInLeft delay-0-2s">
                             <div className="about-two-content mb-50">
                                 <div className="section-title mb-30">
-                                    <span className="sub-title mb-10">Trusted web design services</span>
+                                    <span className="sub-title mb-10">Efficience Consulting</span>
                                     <h2>CE QUE VOUS Y GAGNEZ :</h2>
                                 </div>
                                 <div className="row pt-25">
