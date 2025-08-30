@@ -118,9 +118,9 @@ export default function Blog2() {
                       </blockquote>
                     </div>
 
-                    <div className="image">
-                      <img src="/assets/images/blog/act1.png" alt="Blog" />
-                    </div>
+                   
+                    <Image width={1100} height={600} priority src="/assets/images/blog/act1.png" alt="Blog" />
+                 
                   </div>
 
                   {/* === 2022 (NE PAS MODIFIER) === */}
@@ -136,7 +136,7 @@ export default function Blog2() {
                       </p>
                     </div>
 
-                    <div className="video-wrapper" style={{ position: "relative", maxWidth: "900px" }}>
+                    <div className="video-wrapper" style={{ position: "relative", maxWidth: "960px" }}>
                       <video
                         src="/assets/images/video/video.mp4"
                         controls
@@ -145,17 +145,7 @@ export default function Blog2() {
                         loop
                         style={{ width: "100%", height: "auto" }}
                       />
-                      <img
-                        src="/assets/images/logos/logo.png"
-                        alt="Poster"
-                        style={{
-                          position: "absolute",
-                          top: "50%",
-                          left: "50%",
-                          width: "150px", // smaller size
-                          transform: "translate(-50%, -50%)",
-                        }}
-                      />
+                      
                     </div>
 
                   </div>
