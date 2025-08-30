@@ -1,11 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 function LeftEdgePattern({
   width = 130,
   dark = "#2C5172",
   accent = "#4A8F3F",
   hideBelow = 768,
+  pushTargetSelector = "body", // what to pad, default body
 }) {
+  useEffect(() => {
+    const mq = window.matchMedia(`(max-width: ${hideBelow}px)`);
+    const target =
+      pushTargetSelector === "body"
+        ? document.body
+        : document.querySelector(pushTargetSelector);
+
+    const apply = () => {
+      if (!target) return;
+      if (mq.matches) {
+        target.style.paddingLeft = "";
+      } else {
+        target.style.paddingLeft = `${width}px`;
+      }
+    };
+
+    apply();
+    mq.addEventListener("change", apply);
+    return () => {
+      mq.removeEventListener("change", apply);
+      if (target) target.style.paddingLeft = "";
+    };
+  }, [width, hideBelow, pushTargetSelector]);
+
   return (
     <>
       <div className="left-edge" aria-hidden="true">
@@ -31,7 +56,7 @@ function LeftEdgePattern({
           bottom: 0;
           width: ${width}px;
           pointer-events: none;
-          z-index: 2; /* put it ABOVE backgrounds */
+          z-index: 2;
         }
         .ribbon {
           height: 100vh;

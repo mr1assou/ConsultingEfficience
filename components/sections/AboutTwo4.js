@@ -5,7 +5,7 @@ import Image from "next/image"
 export default function AboutTwo4() {
     return (
         <>
-            <section id="about" className="about-two-area pt-135 pb-85 rpt-100 rpb-50 rel z-1">
+            <section id="about" className="about-two-area pt-135 pb-85 rpt-100 rpb-50 rel z-1 ">
                 <div className="container">
                     <div className="row gap-110 align-items-center">
                         <div className="col-xl-6 wow fadeInRight delay-0-2s">

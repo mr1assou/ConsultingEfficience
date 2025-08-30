@@ -4,7 +4,7 @@ import Link from "next/link"
 export default function ServicesFour4() {
     return (
         <>
-            <section className="services-area-four pb-130 pt-130 rpb-100 rel z-1">
+            <section className="services-area-four pb-130 pt-130 rpb-100 rel z-1 py-20" style={{background:"blue"}}>
                 <div className="container">
                     <div className="row gap-150 justify-content-between">
                         <div className="col-lg-6 wow fadeInLeft delay-0-2s">
