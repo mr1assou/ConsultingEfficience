@@ -10,11 +10,8 @@ export default function AboutTwo4() {
                     <div className="row gap-110 align-items-center">
                         <div className="col-xl-6 wow fadeInRight delay-0-2s">
                             <div className="about-three-images mb-50">
-                                <div className="experience-corner">
-                                    <img src="/assets/images/shapes/experience-corner.jpg" alt="Shape" />
-                                </div>
                                 <div className="image">
-                                    <Image width={500} height={400} priority src="/assets/images/about/about-three.png" alt="About" />
+                                    <Image width={300} height={300} priority src="/assets/images/about/about-three.png" alt="About" />
                                 </div>
                             </div>
                         </div>
@@ -73,7 +70,7 @@ export default function AboutTwo4() {
                             <div className="about-three-images mb-50">
 
                                 <div className="image">
-                                    <Image width={500} height={400} priority src="/assets/images/about/experience-corner.png" alt="About" />
+                                    <Image width={300} height={300} priority src="/assets/images/about/experience-corner.png" alt="About" />
                                 </div>
                             </div>
                         </div>
@@ -137,7 +134,7 @@ export default function AboutTwo4() {
                             <div className="about-three-images mb-50">
 
                                 <div className="image">
-                                    <Image width={500} height={400} priority src="/assets/images/about/sn.png" alt="About" />
+                                    <Image width={300} height={300} priority src="/assets/images/about/sn.png" alt="About" />
                                 </div>
                             </div>
                         </div>

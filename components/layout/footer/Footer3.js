@@ -3,7 +3,7 @@ import Link from "next/link"
 export default function Footer3() {
     return (
         <>
-            <footer className="main-footer pt-110 rpt-90 footer-two rel z-1">
+            <footer className="main-footer pt-110 rpt-90 footer-two rel z-10">
                 <div className="container">
                     <div className="footer-lets-talk pb-80 rpb-35"><span className="text mb-20">Let’s join forces to create <span>something</span> extraordinary </span><Link href="/contact" className="details-btn mb-20"><i className="fal fa-arrow-right" /></Link></div>
                 </div>

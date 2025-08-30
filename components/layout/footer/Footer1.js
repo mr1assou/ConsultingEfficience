@@ -3,7 +3,9 @@ import Link from "next/link"
 export default function Footer1() {
     return (
         <>
-            <footer className="main-footer footer-one pt-70 pb-20 bgc-black bordered-top rel z-1">
+            
+            <footer className="main-footer footer-one pt-70 pb-20 bgc-black bordered-top rel z-10">
+                
                 <div className="container">
                     <div className="row justify-content-between">
                         <div className="col-xl-3 col-lg-4 col-sm-6">
@@ -18,7 +20,7 @@ export default function Footer1() {
                                
                                 <ul>
                                     <li><Link href="/">Acceuil</Link></li>
-                                    <li><Link href="/a_propos">À propos</Link></li>
+                                    {/* <li><Link href="/a_propos">À propos</Link></li> */}
                                     <li><Link href="/formation">Formation</Link></li>
                                     <li><Link href="/coaching">Coaching</Link></li>
                                     <li><Link href="/expertise_financiere">Expertise financière</Link></li>
@@ -46,8 +48,9 @@ export default function Footer1() {
                         </div>
                     </div>
                 </div>
+                
             </footer>
-
+        
         </>
     )
 }

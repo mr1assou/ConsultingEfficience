@@ -1,3 +1,4 @@
+"use client"
 import Testimonials3 from "@/components/sections/Testimonials3"
 import Layout from "@/components/layout/Layout"
 import Image from "next/image"
@@ -6,13 +7,15 @@ export default function Portfolio() {
 
     return (
         <>
+            
+
             <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Nos Engagements">
                 <div>
                     <section id="about" className="about-area bgc-black py-145 rpy-100 rel z-1">
                         <div className="container">
                             <div className="row justify-content-between g-5">
                                 <div className="col-lg-6">
-                                    <Image src="/assets/images/hero/eng.png" alt="Hero" width={700} height={380} priority/>
+                                    <Image src="/assets/images/hero/eng.png" alt="Hero" width={700} height={380} priority />
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="about-content wow fadeInRight delay-0-2s">
@@ -84,6 +87,35 @@ export default function Portfolio() {
                 </div>
 
             </Layout>
+                <style jsx global>{`
+                  .bottom-ribbon-bg {
+                   
+                    inset: auto 0 0 0; /* stick to bottom */
+                    width: 100%;
+                    height: 200px;      /* adjust height as you like */
+                    z-index: 100;
+                    pointer-events: none;
+                  }
+                `}</style>
+                
+                            {/* Bottom background pattern */}
+                            <div className="bottom-ribbon-bg" aria-hidden>
+                                <svg
+                                    width="100%" height="100%"
+                                    viewBox="0 0 1920 300"
+                                    preserveAspectRatio="xMidYMid slice"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    {/* Left navy shape */}
+                                    <polygon points="0,300 0,100 960,300" fill="var(--secondary-color)" />
+                
+                                    {/* Right navy shape reaching center */}
+                                    <polygon points="1920,300 1920,100 960,300" fill="var(--secondary-color)" />
+                
+                                    {/* Green triangle in the middle */}
+                                    <polygon points="480,300 960,100 1440,300" fill="var(--primary-color)" />
+                                </svg>
+                            </div>
         </>
     )
 }

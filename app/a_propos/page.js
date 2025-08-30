@@ -114,7 +114,7 @@ export default function About() {
                             <div className="row justify-content-between">
                                 <div className="col-lg-4">
                                     <div className="our-experience-years rmb-55 wow fadeInLeft delay-0-2s">
-                                        <span className="years">30</span>
+                                        <span className="years">12</span>
                                         <span className="text">années d'expérience</span>
                                     </div>
                                 </div>

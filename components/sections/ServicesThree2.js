@@ -16,13 +16,13 @@ export default function ServicesThree2() {
                 <h2>Services consulting que vous obtenez</h2>
               </div>
             </div>
-            <div className="col-xl-5 col-lg-6 wow fadeInRight delay-0-2s">
+            {/* <div className="col-xl-5 col-lg-6 wow fadeInRight delay-0-2s">
               <div className="text mb-20">
                 Efficience Consulting offre un service de confiance structuré en deux volets : formation et coaching.
                 La formation développe les compétences clés pour optimiser la performance des équipes.
                 Le coaching accompagne les professionnels dans l'atteinte de leurs objectifs et le renforcement de leur leadership.
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -42,9 +42,7 @@ export default function ServicesThree2() {
                 </span>
 
                 <div className="hover-content">
-                  <div className="icon">
-                    <img src="/assets/images/icons/promotion.png" alt="Icon" />
-                  </div>
+
                   <h6>Formation</h6>
                 </div>
 
@@ -71,9 +69,7 @@ export default function ServicesThree2() {
                 </span>
 
                 <div className="hover-content">
-                  <div className="icon">
-                    <img src="/assets/images/icons/development-2.png"  priority alt="Icon" />
-                  </div>
+       
                   <h6>Coaching</h6>
                 </div>
 

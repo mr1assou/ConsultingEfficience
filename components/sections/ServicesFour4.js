@@ -11,7 +11,6 @@ export default function ServicesFour4() {
                             <div className="section-title mb-20">
                                 <span className="sub-title mb-20">Efficience Consulting</span>
                                 <h2>Optimisation financière de votre formation</h2>
-                                <Link href="/services" className="read-more-two mt-20">ce qu'on fait <img src="/assets/images/icons/arrow.svg" alt="Arrow" /></Link>
                             </div>
                         </div>
                         <div className="col-lg-6 pt-35 wow fadeInRight delay-0-2s">

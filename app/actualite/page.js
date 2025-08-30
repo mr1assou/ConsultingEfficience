@@ -1,17 +1,109 @@
+"use client"
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
 import Image from "next/image"
+import LeftEdgePattern from "@/components/elements/LeftEdgePatter"
 
 export default function Blog2() {
   return (
     <>
+      <style jsx global>{`
+  :root{
+    --primary-color:#307926;   /* green */
+    --secondary-color:#183D58; /* navy */
+  }
+
+  /* Ensure page content sits above background */
+  body, #__next, .page-root { position: relative; z-index: 0; }
+
+  /* Fixed right-side background, behind all content */
+  .right-ribbon-bg{
+    position: fixed;
+    inset: 0 0 0 auto;   /* stick to the right */
+    width: min(26vw, 420px);
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;        /* never block clicks */
+    filter: drop-shadow(-10px 0 30px rgba(0,0,0,.15));
+  }
+
+  /* Let content breathe on small screens */
+  @media (max-width: 992px){
+    .right-ribbon-bg{ width: 32vw; }
+  }
+  @media (max-width: 768px){
+    .right-ribbon-bg{ width: 40vw; opacity:.6; } /* subtler on mobile */
+  }
+  @media (max-width: 520px){
+    .right-ribbon-bg{ display:none; } /* hide if it cramps layout */
+  }
+
+  /* Optional: reduce animation for accessibility */
+  @media (prefers-reduced-motion: reduce){
+    .right-ribbon-bg svg *{ animation:none !important; }
+  }
+`}</style>
+
+      <style jsx global>{`
+  /* Left-side background, behind all content */
+  .left-ribbon-bg{
+    position: fixed;
+    inset: 0 auto 0 0;   /* stick to the left */
+    width: min(26vw, 420px);
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    filter: drop-shadow(10px 0 30px rgba(0,0,0,.15)); /* shadow opposite side */
+  }
+
+  @media (max-width: 992px){
+    .left-ribbon-bg{ width: 32vw; }
+  }
+  @media (max-width: 768px){
+    .left-ribbon-bg{ width: 40vw; opacity:.6; }
+  }
+  @media (max-width: 520px){
+    .left-ribbon-bg{ display:none; }
+  }
+`}</style>
+      {/* Right-side geometric ribbon (UNDER all components) */}
+      <div className="right-ribbon-bg" aria-hidden>
+        <svg
+          width="100%" height="100%" viewBox="0 0 300 1000"
+          preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"
+        >
+
+          <polygon points="0,0 300,0 240,180 160,220" fill="var(--secondary-color)" />
+          <polygon points="160,220 240,180 190,420 90,500" fill="var(--primary-color)" />
+          <polygon points="90,500 190,420 260,620 200,700" fill="var(--secondary-color)" />
+          <polygon points="200,700 260,620 300,920 130,1000" fill="var(--primary-color)" />
+          <polygon points="190,420 260,620 245,635 175,455" fill="#ffffff" opacity=".06" />
+          <polygon points="240,180 190,420 175,430 225,185" fill="#ffffff" opacity=".06" />
+        </svg>
+      </div>
+      <div className="left-ribbon-bg" aria-hidden>
+        <svg
+          width="100%" height="100%" viewBox="0 0 300 1000"
+          preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon points="300,0 0,0 60,180 140,220" fill="var(--secondary-color)" />
+          <polygon points="140,220 60,180 110,420 210,500" fill="var(--primary-color)" />
+          <polygon points="210,500 110,420 40,620 100,700" fill="var(--secondary-color)" />
+          <polygon points="100,700 40,620 0,920 170,1000" fill="var(--primary-color)" />
+
+          {/* subtle white highlights for depth */}
+          <polygon points="110,420 40,620 55,635 125,455" fill="#ffffff" opacity=".06" />
+          <polygon points="60,180 110,420 125,430 75,185" fill="#ffffff" opacity=".06" />
+        </svg>
+      </div>
       <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="blog page">
+
         <div>
           {/* Blog Page Two Area start */}
           <div className="blog-page-two pt-100 rpt-70">
             <div className="container">
               <div className="row gap-50">
-                <div className="col-lg-8">
+                <div >
                   <div className="blog-standard-item wow fadeInUp delay-0-2s">
                     <div className="content">
                       <blockquote>
@@ -44,17 +136,28 @@ export default function Blog2() {
                       </p>
                     </div>
 
-                    <div className="image">
+                    <div className="video-wrapper" style={{ position: "relative", maxWidth: "900px" }}>
                       <video
                         src="/assets/images/video/video.mp4"
                         controls
                         autoPlay={false}
-                        poster="/assets/images/video/thumbnail.png"
                         muted
                         loop
                         style={{ width: "100%", height: "auto" }}
                       />
+                      <img
+                        src="/assets/images/logos/logo.png"
+                        alt="Poster"
+                        style={{
+                          position: "absolute",
+                          top: "50%",
+                          left: "50%",
+                          width: "150px", // smaller size
+                          transform: "translate(-50%, -50%)",
+                        }}
+                      />
                     </div>
+
                   </div>
 
                   <div className="blog-standard-item wow fadeInUp delay-0-2s">
@@ -82,7 +185,7 @@ export default function Blog2() {
                       </h4>
                       <p>
                         le vainqueur national 2019 a été <b>coaché par
-                        Ryad Mimeche</b>, dont l&apos;accompagnement a joué un rôle déterminant dans cette
+                          Ryad Mimeche</b>, dont l&apos;accompagnement a joué un rôle déterminant dans cette
                         réussite. Bravo à toute l&apos;équipe !
                       </p>
                     </div>
@@ -96,50 +199,11 @@ export default function Blog2() {
                       <p>
                         En 2019, l’édition a confirmé l’exigence et la portée nationale des
                         Négociales. Le titre suprême est revenu à un lauréat coaché par <b>Ryad
-                        Mimeche</b>, soulignant l’importance de la préparation, de la rigueur
+                          Mimeche</b>, soulignant l’importance de la préparation, de la rigueur
                         méthodologique et de la posture professionnelle dans la performance de haut
                         niveau. Cette réussite a mis en lumière la dynamique lorraine et l’excellence
                         de l’encadrement.
                       </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="col-lg-4 col-md-7 col-sm-9">
-                  <div className="main-sidebar rmt-65">
-                    <div className="widget widget-author wow fadeInUp delay-0-4s">
-                      <img src="/assets/images/logos/logo.png" alt="Author" />
-                    </div>
-
-                    <div className="widget widget-category wow fadeInUp delay-0-4s">
-                      <h5 className="widget-title">Catégories</h5>
-                      <ul>
-                        <li>
-                          <Link href="/formation">
-                            Formations <span>01</span>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/coaching">
-                            Coaching <span>02</span>
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div className="widget widget-tag-cloud wow fadeInUp delay-0-2s">
-                      <h5 className="widget-title"></h5>
-                      <div className="tag-coulds">
-                        <Link href="/service-details">Prospection &amp; Vente</Link>
-                        <Link href="/service-details">Négociation</Link>
-                        <Link href="/service-details">Management</Link>
-                        <Link href="/service-details">Communication &amp; Influence</Link>
-                        <Link href="/service-details">Développement personnel</Link>
-                        <Link href="/service-details2">Leadership</Link>
-                        <Link href="/service-details2">Posture professionnelle</Link>
-                        <Link href="/service-details2">Croissance personnelle</Link>
-                        <Link href="/service-details2">Mieux-être durable</Link>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -159,36 +223,47 @@ export default function Blog2() {
           {/* Lets Talk Area end */}
 
           {/* Headline area start */}
-          <div className="headline-area bgc-primary py-20">
-            <div className="headline-wrap style-two color-black">
-              <span className="marquee-wrap">
-                <span className="marquee-inner left">
-                  <span className="marquee-item"><b>Prospection & Vente</b><i className="fas fa-bahai" /></span>
-                  <span className="marquee-item"><b>Négociation</b><i className="fas fa-bahai" /></span>
-                  <span className="marquee-item"><b>Management</b><i className="fas fa-bahai" /></span>
-                  <span className="marquee-item"><b>Communication & Influence</b><i className="fas fa-bahai" /></span>
-                  <span className="marquee-item"><b>Développement personnel</b><i className="fas fa-bahai" /></span>
-                </span>
-                <span className="marquee-inner left">
-                  <span className="marquee-item"><b>Leadership</b><i className="fas fa-bahai" /></span>
-                  <span className="marquee-item"><b>Posture professionnelle</b><i className="fas fa-bahai" /></span>
-                  <span className="marquee-item"><b>Croissance personnelle</b><i className="fas fa-bahai" /></span>
-                  <span className="marquee-item"><b>Mieux-être durable</b><i className="fas fa-bahai" /></span>
-                  <span className="marquee-item"><b>Négociation</b><i className="fas fa-bahai" /></span>
-                </span>
-                <span className="marquee-inner left">
-                  <span className="marquee-item"><b>Prospection & Vente</b><i className="fas fa-bahai" /></span>
-                  <span className="marquee-item"><b>Management</b><i className="fas fa-bahai" /></span>
-                  <span className="marquee-item"><b>Communication & Influence</b><i className="fas fa-bahai" /></span>
-                  <span className="marquee-item"><b>Développement personnel</b><i className="fas fa-bahai" /></span>
-                  <span className="marquee-item"><b>Leadership</b><i className="fas fa-bahai" /></span>
-                </span>
+          <div className="headline-wrap style-three color-black">
+            <span className="marquee-wrap bg-white py-15">
+              <span className="marquee-inner left">
+                <span className="marquee-item"><b>Prospection & Vente</b><i className="fas fa-bahai" /></span>
+                <span className="marquee-item"><b>Négociation</b><i className="fas fa-bahai" /></span>
+                <span className="marquee-item"><b>Management</b><i className="fas fa-bahai" /></span>
+                <span className="marquee-item"><b>Communication & Influence</b><i className="fas fa-bahai" /></span>
+                <span className="marquee-item"><b>Développement personnel</b><i className="fas fa-bahai" /></span>
+                <span className="marquee-item"><b>Leadership</b><i className="fas fa-bahai" /></span>
+                <span className="marquee-item"><b>Posture professionnelle</b><i className="fas fa-bahai" /></span>
+                <span className="marquee-item"><b>Croissance personnelle</b><i className="fas fa-bahai" /></span>
+                <span className="marquee-item"><b>Mieux-être durable</b><i className="fas fa-bahai" /></span>
               </span>
-            </div>
+              <span className="marquee-inner left">
+                <span className="marquee-item"><b>Prospection & Vente</b><i className="fas fa-bahai" /></span>
+                <span className="marquee-item"><b>Négociation</b><i className="fas fa-bahai" /></span>
+                <span className="marquee-item"><b>Management</b><i className="fas fa-bahai" /></span>
+                <span className="marquee-item"><b>Communication & Influence</b><i className="fas fa-bahai" /></span>
+                <span className="marquee-item"><b>Développement personnel</b><i className="fas fa-bahai" /></span>
+                <span className="marquee-item"><b>Leadership</b><i className="fas fa-bahai" /></span>
+                <span className="marquee-item"><b>Posture professionnelle</b><i className="fas fa-bahai" /></span>
+                <span className="marquee-item"><b>Croissance personnelle</b><i className="fas fa-bahai" /></span>
+                <span className="marquee-item"><b>Mieux-être durable</b><i className="fas fa-bahai" /></span>
+              </span>
+              <span className="marquee-inner left">
+                <span className="marquee-item"><b>Prospection & Vente</b><i className="fas fa-bahai" /></span>
+                <span className="marquee-item"><b>Négociation</b><i className="fas fa-bahai" /></span>
+                <span className="marquee-item"><b>Management</b><i className="fas fa-bahai" /></span>
+                <span className="marquee-item"><b>Communication & Influence</b><i className="fas fa-bahai" /></span>
+                <span className="marquee-item"><b>Développement personnel</b><i className="fas fa-bahai" /></span>
+                <span className="marquee-item"><b>Leadership</b><i className="fas fa-bahai" /></span>
+                <span className="marquee-item"><b>Posture professionnelle</b><i className="fas fa-bahai" /></span>
+                <span className="marquee-item"><b>Croissance personnelle</b><i className="fas fa-bahai" /></span>
+                <span className="marquee-item"><b>Mieux-être durable</b><i className="fas fa-bahai" /></span>
+              </span>
+            </span>
           </div>
           {/* Headline Area end */}
         </div>
       </Layout>
+
     </>
   )
 }

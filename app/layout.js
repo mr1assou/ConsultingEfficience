@@ -8,6 +8,7 @@ import "/public/assets/css/magnific-popup.min.css"
 import "/public/assets/css/nice-select.min.css"
 import "/public/assets/css/slick.min.css"
 import "/public/assets/css/style.css"
+import "/public/assets/css/professional-theme.css"
 
 import { Playfair_Display, Plus_Jakarta_Sans } from 'next/font/google'
 

@@ -9,20 +9,297 @@ import Video2 from "@/components/sections/Video2"
 import ServicesThree2 from "@/components/sections/ServicesThree2"
 import Client2 from "@/components/sections/Client2"
 import FirstVisitPreloader from "@/components/elements/FirstVisitPreloader"
+import Link from "next/link"
+import Image from "next/image"
+import { useEffect, useState, useRef } from "react"
+
 
 export default function Home() {
+    const [counters, setCounters] = useState({
+        clients: 0,
+        years: 0,
+        consultations: 0,
+        formations: 0
+    });
+    const [hasAnimated, setHasAnimated] = useState(false);
+    const counterRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting && !hasAnimated) {
+                        setHasAnimated(true);
+                        animateCounters();
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+
+        if (counterRef.current) {
+            observer.observe(counterRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, [hasAnimated]);
+
+    const animateCounters = () => {
+        const targetCounts = { clients: 250, years: 30, consultations: 1000, formations: 1200 };
+        const duration = 2000; // 2 seconds
+        const steps = 60;
+        const stepDuration = duration / steps;
+
+        let currentStep = 0;
+        const interval = setInterval(() => {
+            currentStep++;
+            const progress = currentStep / steps;
+
+            setCounters({
+                clients: Math.floor(targetCounts.clients * progress),
+                years: Math.floor(targetCounts.years * progress),
+                consultations: Math.floor(targetCounts.consultations * progress),
+                formations: Math.floor(targetCounts.formations * progress)
+            });
+
+            if (currentStep >= steps) {
+                clearInterval(interval);
+                setCounters(targetCounts);
+            }
+        }, stepDuration);
+    };
+
     return (
         <FirstVisitPreloader pageKey="home">
             <Layout headerStyle={1} footerStyle={1} bodyCls="home-one">
-                <Hero1 />
-                <Headline3 />
+                {/* <Hero1 />
+                <Headline3 /> */}
+                <section className="about-page-hero bg-primary-shape rel z-1">
+                    <div className="container">
+                        <div className="row align-items-end justify-content-between">
+                            <div className="col-lg-8 wow fadeInLeft delay-0-2s">
+                                <div className="about-hero-content pt-50 rpt-95 pb-95">
+                                    <h1>Nous sommes créative et professionnelle</h1>
+                                    <p>Nous travaillons en étroite collaboration avec nos clients tout au long du processus de conseil, depuis l'analyse initiale jusqu'à la mise en œuvre finale, afin de garantir que nous répondons à leurs attentes et dépassons leurs objectifs.</p>
+                                    <Link href="/contact" className="theme-btn style-two">Contactez-Nous</Link>
+                                    <div className="row justify-content-center">
+                                        <div className="col-lg-6">
+                                            {/* <div className="hero-scroll-down mt-60 wow fadeInDown delay-0-6s">
+                                                    <Link href="#about"><i className="far fa-arrow-down" /></Link>
+                                                </div> */}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-4 wow fadeInRight delay-0-2s">
+                                <div className="about-hero-image" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                    <Image
+                                        width={500}
+                                        height={700}
+                                        priority
+                                        src="/assets/images/testimonials/heho.png"
+                                        alt="Professional Portrait"
+                                        style={{
+                                            height: "auto",
+                                            maxHeight: "700px",
+                                            width: "100%",
+                                            objectFit: "contain",
+                                            borderRadius: "20px",
+                                            boxShadow: "0 20px 40px rgba(0,0,0,0.15)"
+                                        }}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="headline-wrap style-three color-black">
+                        <span className="marquee-wrap bg-white py-15">
+                            <span className="marquee-inner left">
+                                <span className="marquee-item"><b>Prospection & Vente</b><i className="fas fa-bahai" /></span>
+                                <span className="marquee-item"><b>Négociation</b><i className="fas fa-bahai" /></span>
+                                <span className="marquee-item"><b>Management</b><i className="fas fa-bahai" /></span>
+                                <span className="marquee-item"><b>Communication & Influence</b><i className="fas fa-bahai" /></span>
+                                <span className="marquee-item"><b>Développement personnel</b><i className="fas fa-bahai" /></span>
+                                <span className="marquee-item"><b>Leadership</b><i className="fas fa-bahai" /></span>
+                                <span className="marquee-item"><b>Posture professionnelle</b><i className="fas fa-bahai" /></span>
+                                <span className="marquee-item"><b>Croissance personnelle</b><i className="fas fa-bahai" /></span>
+                                <span className="marquee-item"><b>Mieux-être durable</b><i className="fas fa-bahai" /></span>
+                            </span>
+                            <span className="marquee-inner left">
+                                <span className="marquee-item"><b>Prospection & Vente</b><i className="fas fa-bahai" /></span>
+                                <span className="marquee-item"><b>Négociation</b><i className="fas fa-bahai" /></span>
+                                <span className="marquee-item"><b>Management</b><i className="fas fa-bahai" /></span>
+                                <span className="marquee-item"><b>Communication & Influence</b><i className="fas fa-bahai" /></span>
+                                <span className="marquee-item"><b>Développement personnel</b><i className="fas fa-bahai" /></span>
+                                <span className="marquee-item"><b>Leadership</b><i className="fas fa-bahai" /></span>
+                                <span className="marquee-item"><b>Posture professionnelle</b><i className="fas fa-bahai" /></span>
+                                <span className="marquee-item"><b>Croissance personnelle</b><i className="fas fa-bahai" /></span>
+                                <span className="marquee-item"><b>Mieux-être durable</b><i className="fas fa-bahai" /></span>
+                            </span>
+                            <span className="marquee-inner left">
+                                <span className="marquee-item"><b>Prospection & Vente</b><i className="fas fa-bahai" /></span>
+                                <span className="marquee-item"><b>Négociation</b><i className="fas fa-bahai" /></span>
+                                <span className="marquee-item"><b>Management</b><i className="fas fa-bahai" /></span>
+                                <span className="marquee-item"><b>Communication & Influence</b><i className="fas fa-bahai" /></span>
+                                <span className="marquee-item"><b>Développement personnel</b><i className="fas fa-bahai" /></span>
+                                <span className="marquee-item"><b>Leadership</b><i className="fas fa-bahai" /></span>
+                                <span className="marquee-item"><b>Posture professionnelle</b><i className="fas fa-bahai" /></span>
+                                <span className="marquee-item"><b>Croissance personnelle</b><i className="fas fa-bahai" /></span>
+                                <span className="marquee-item"><b>Mieux-être durable</b><i className="fas fa-bahai" /></span>
+                            </span>
+                        </span>
+                    </div>
+                </section>
+
+                {/* Second Horizontal Autoplay Slider */}
+                <section className="headline-area bgc-primary py-20">
+                    <div className="headline-wrap style-two color-black">
+                        <span className="marquee-wrap">
+                            <span className="marquee-inner left">
+                                <span className="marquee-item"><b>Expertise Financière</b><i className="fas fa-chart-line" /></span>
+                                <span className="marquee-item"><b>Stratégie d'Entreprise</b><i className="fas fa-lightbulb" /></span>
+                                <span className="marquee-item"><b>Innovation & Créativité</b><i className="fas fa-rocket" /></span>
+                                <span className="marquee-item"><b>Excellence Opérationnelle</b><i className="fas fa-cogs" /></span>
+                                <span className="marquee-item"><b>Transformation Digitale</b><i className="fas fa-laptop-code" /></span>
+                                <span className="marquee-item"><b>Développement Durable</b><i className="fas fa-leaf" /></span>
+                                <span className="marquee-item"><b>Performance & Résultats</b><i className="fas fa-trophy" /></span>
+                                <span className="marquee-item"><b>Vision & Stratégie</b><i className="fas fa-eye" /></span>
+                                <span className="marquee-item"><b>Croissance & Expansion</b><i className="fas fa-globe" /></span>
+                            </span>
+                            <span className="marquee-inner left">
+                                <span className="marquee-item"><b>Expertise Financière</b><i className="fas fa-chart-line" /></span>
+                                <span className="marquee-item"><b>Stratégie d'Entreprise</b><i className="fas fa-lightbulb" /></span>
+                                <span className="marquee-item"><b>Innovation & Créativité</b><i className="fas fa-rocket" /></span>
+                                <span className="marquee-item"><b>Excellence Opérationnelle</b><i className="fas fa-cogs" /></span>
+                                <span className="marquee-item"><b>Transformation Digitale</b><i className="fas fa-laptop-code" /></span>
+                                <span className="marquee-item"><b>Développement Durable</b><i className="fas fa-leaf" /></span>
+                                <span className="marquee-item"><b>Performance & Résultats</b><i className="fas fa-trophy" /></span>
+                                <span className="marquee-item"><b>Vision & Stratégie</b><i className="fas fa-eye" /></span>
+                                <span className="marquee-item"><b>Croissance & Expansion</b><i className="fas fa-globe" /></span>
+                            </span>
+                            <span className="marquee-inner left">
+                                <span className="marquee-item"><b>Expertise Financière</b><i className="fas fa-chart-line" /></span>
+                                <span className="marquee-item"><b>Stratégie d'Entreprise</b><i className="fas fa-lightbulb" /></span>
+                                <span className="marquee-item"><b>Innovation & Créativité</b><i className="fas fa-rocket" /></span>
+                                <span className="marquee-item"><b>Excellence Opérationnelle</b><i className="fas fa-cogs" /></span>
+                                <span className="marquee-item"><b>Transformation Digitale</b><i className="fas fa-laptop-code" /></span>
+                                <span className="marquee-item"><b>Développement Durable</b><i className="fas fa-leaf" /></span>
+                                <span className="marquee-item"><b>Performance & Résultats</b><i className="fas fa-trophy" /></span>
+                                <span className="marquee-item"><b>Vision & Stratégie</b><i className="fas fa-eye" /></span>
+                                <span className="marquee-item"><b>Croissance & Expansion</b><i className="fas fa-globe" /></span>
+                            </span>
+                        </span>
+                    </div>
+                </section>
+
                 <About1 />
+
+                <section id="about" className="about-area bgc-black py-145 rpy-100 rel z-1">
+                    <div className="container">
+                        <div className="row justify-content-between">
+                            <div className="col-lg-4">
+                                <div className="our-experience-years rmb-55 wow fadeInLeft delay-0-2s">
+                                    <span className="years">12</span>
+                                    <span className="text" style={{ color: '#ffffff', textShadow: '3px 3px 6px rgba(0,0,0,0.8), 0 0 20px rgba(255,255,255,0.3)', fontWeight: 'bold', fontSize: '58px', letterSpacing: '2px' }}>années d'expérience</span>
+                                </div>
+                            </div>
+                            <div className="col-lg-7">
+                                <div className="about-content wow fadeInRight delay-0-2s">
+                                    <div className="section-title mb-30">
+                                        <span className="sub-title mb-15">Notre objectif</span>
+                                        <h2>aider chacun à révéler son potentiel, à améliorer sa confiance en soi et à acquérir les outils nécessaires pour relever les défis actuels et futurs.<i className="fas fa-asterisk" /></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div ref={counterRef} className="counter-two-area pt-45 pb-140" style={{ backgroundColor: '#f8f9fa', padding: '60px 0 140px 0' }}>
+                    <div className="container">
+                        <div className="text-center mb-50">
+                            <h2 className="wow fadeInUp delay-0-2s" style={{
+                                color: '#183D58',
+                                fontSize: '22px',
+                                fontWeight: '500',
+                                textTransform: 'uppercase',
+                                letterSpacing: '1px',
+                                textShadow: 'none',
+                                marginBottom: '20px',
+                                position: 'relative'
+                            }}>
+                                nous sommes fiers de travailler avec un large éventail des clients
+                            </h2>
+                            <div style={{
+                                width: '80px',
+                                height: '4px',
+                                backgroundColor: '#183D58',
+                                margin: '0 auto',
+                                borderRadius: '2px'
+                            }}></div>
+                        </div>
+                        <div className="row no-gap">
+                            <div className="col-lg-3 col-6 col-small">
+                                <div className="counter-item-two counter-text-wrap wow fadeInUp delay-0-2s" style={{ textAlign: 'center', padding: '30px 15px', backgroundColor: '#ffffff', borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)', margin: '10px', border: '2px solid #e9ecef' }}>
+                                    <span style={{ fontSize: '48px', fontWeight: 'bold', color: '#183D58', display: 'block', marginBottom: '10px' }}>{counters.clients}+</span>
+                                    <h6 className="counter-title" style={{ color: '#333', fontSize: '16px', fontWeight: '600', marginTop: '15px' }}>Clients satisfaits</h6>
+                                </div>
+                            </div>
+                            <div className="col-lg-3 col-6 col-small">
+                                <div className="counter-item-two counter-text-wrap wow fadeInUp delay-0-3s" style={{ textAlign: 'center', padding: '30px 15px', backgroundColor: '#ffffff', borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)', margin: '10px', border: '2px solid #e9ecef' }}>
+                                    <span style={{ fontSize: '48px', fontWeight: 'bold', color: '#183D58', display: 'block', marginBottom: '10px' }}>{counters.years}+</span>
+                                    <h6 className="counter-title" style={{ color: '#333', fontSize: '16px', fontWeight: '600', marginTop: '15px' }}>Années d'expérience</h6>
+                                </div>
+                            </div>
+                            <div className="col-lg-3 col-6 col-small">
+                                <div className="counter-item-two counter-text-wrap wow fadeInUp delay-0-4s" style={{ textAlign: 'center', padding: '30px 15px', backgroundColor: '#ffffff', borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)', margin: '10px', border: '2px solid #e9ecef' }}>
+                                    <span style={{ fontSize: '48px', fontWeight: 'bold', color: '#183D58', display: 'block', marginBottom: '10px' }}>{counters.consultations}+</span>
+                                    <h6 className="counter-title" style={{ color: '#333', fontSize: '16px', fontWeight: '600', marginTop: '15px' }}>Consultations</h6>
+                                </div>
+                            </div>
+                            <div className="col-lg-3 col-6 col-small">
+                                <div className="counter-item-two counter-text-wrap wow fadeInUp delay-0-4s" style={{ textAlign: 'center', padding: '30px 15px', backgroundColor: '#ffffff', borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)', margin: '10px', border: '2px solid #e9ecef' }}>
+                                    <span style={{ fontSize: '48px', fontWeight: 'bold', color: '#183D58', display: 'block', marginBottom: '15px' }}>{counters.formations}+</span>
+                                    <h6 className="counter-title" style={{ color: '#333', fontSize: '16px', fontWeight: '600', marginTop: '15px' }}>Formations</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <Video2 />
-                <ServicesThree2 />
                 <Client2 />
                 <Testimonials2 />
                 <LetsTalk1 />
             </Layout>
+            <style jsx global>{`
+                  .bottom-ribbon-bg {
+                   
+                    inset: auto 0 0 0; /* stick to bottom */
+                    width: 100%;
+                    height: 200px;      /* adjust height as you like */
+                    z-index: 100;
+                    pointer-events: none;
+                  }
+                `}</style>
+
+            {/* Bottom background pattern */}
+            <div className="bottom-ribbon-bg" aria-hidden>
+                <svg
+                    width="100%" height="100%"
+                    viewBox="0 0 1920 300"
+                    preserveAspectRatio="xMidYMid slice"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    {/* Left navy shape */}
+                    <polygon points="0,300 0,100 960,300" fill="var(--secondary-color)" />
+
+                    {/* Right navy shape reaching center */}
+                    <polygon points="1920,300 1920,100 960,300" fill="var(--secondary-color)" />
+
+                    {/* Green triangle in the middle */}
+                    <polygon points="480,300 960,100 1440,300" fill="var(--primary-color)" />
+                </svg>
+            </div>
         </FirstVisitPreloader>
     )
 }

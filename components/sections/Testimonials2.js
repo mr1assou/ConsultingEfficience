@@ -19,11 +19,24 @@ export default function Testimonials2() {
         <>
             <section className="testimonials-two-area pb-115 rpb-80 rel z-1">
                 <div className="container">
-                    <div className="testimonials-two-inner" style={{ backgroundImage: 'url(assets/images/testimonials/testimonials-bg.png)' }}>
+                    <div className="section-title mb-20 rmb-35">
+                        <h2 style={{ color: 'var(--primary-color)' }}>Témoignages Clients</h2>
+                    </div>
+                    <div className="testimonials-two-inner" style={{ backgroundColor: '#FFFFFF', backgroundImage: 'none' }}>
                         <div className="row align-items-center justify-content-between">
                             <div className="col-lg-3 wow fadeInRight delay-0-2s">
-                                <div className="testimonials-image rmb-55">
-                                    <Image width={400} height={500} priority src="/assets/images/testimonials/testemo.png" alt="Testimonials" />
+                                <div className="testimonials-image rmb-55" style={{backgroundColor: 'transparent'}}>
+                                    <Image 
+                                        width={400} 
+                                        height={500} 
+                                        priority 
+                                        src="/assets/images/testimonials/testemo.png" 
+                                        alt="Testimonials"
+                                        style={{
+                                            backgroundColor: 'transparent',
+                                            mixBlendMode: 'multiply'
+                                        }}
+                                    />
                                 </div>
                             </div>
                             <div className="col-xl-8 col-lg-9 wow fadeInLeft delay-0-2s">

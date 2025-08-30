@@ -8,7 +8,7 @@ export default function Header3({ scroll, isMobileMenu, handleMobileMenu, isSide
 
     return (
         <>
-            <header className={`main-header ${scroll ? "fixed-header" : ""}`}>
+            <header className={`main-header ${scroll ? "fixed-header" : ""}` } style={{background:"#FFFFFF"}}>
                 {/*Header-Upper*/}
                 <div className="header-upper">
                     <div className="container container-1695 clearfix">
@@ -61,6 +61,7 @@ export default function Header3({ scroll, isMobileMenu, handleMobileMenu, isSide
                                     <button><img src="/assets/images/icons/toggler.svg" alt="Toggler" /></button>
                                 </div>
                                 <Link href="/contact" className="theme-btn">Contactez</Link>
+                                
                             </div>
                         </div>
                     </div>

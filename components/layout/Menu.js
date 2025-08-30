@@ -11,7 +11,7 @@ export default function Menu() {
   const close = () => setOpenKey(null);
 
   const isActive = (href) =>
-    pathname === href ? { color: '#C4EF17' } : {};
+    pathname === href ? { color: '#307926' } : {};
 
   return (
     <ul className="navigation clearfix">
@@ -27,7 +27,7 @@ export default function Menu() {
       </li>
 
       {/* À propos */}
-      <li
+      {/* <li
         className="dropdown"
         onMouseEnter={() => open(2)}
         onMouseLeave={close}
@@ -35,7 +35,7 @@ export default function Menu() {
         <Link href="/a_propos" style={isActive('/a_propos')}>
           À propos
         </Link>
-      </li>
+      </li> */}
 
       {/* Domaines D'interventions */}
       <li
