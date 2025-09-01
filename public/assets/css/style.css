@@ -1300,9 +1300,9 @@ a.theme-btn.style-two:hover {
 }
 
 /* Color + Background */
-.bgc-black {
+/* .bgc-black {
     background-color: var(--secondary-color);
-}
+} */
 
 .bgc-primary {
     background-color: var(--primary-color);

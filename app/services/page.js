@@ -18,9 +18,7 @@ export default function Service() {
                             <Link href="/contact" className="lets-talk-text wow zoomIn delay-0-2s">Contactez-Nous <i className="fal fa-arrow-right" /></Link>
                         </div>
                     </div>
-                    {/* Lets Talk Area end */}
-                    {/* Headline area start */}
-
+                  
                 </div>
                 <div className="headline-wrap style-three color-black">
                     <span className="marquee-wrap bg-white py-15">
