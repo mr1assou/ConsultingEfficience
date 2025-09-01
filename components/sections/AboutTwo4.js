@@ -60,7 +60,7 @@ export default function AboutTwo4() {
                                     </div>
                                 </div>
                                 <div className="author-name-btn">
-                                    <Link href="/a_propos" className="theme-btn style-two">Savoir plus sur nous</Link>
+                                    <Link href="/" className="theme-btn style-two">Savoir plus sur nous</Link>
                                 </div>
                             </div>
                         </div>
@@ -123,7 +123,7 @@ export default function AboutTwo4() {
                                     </div>
                                 </div>
                                 <div className="author-name-btn">
-                                    <Link href="/a_propos" className="theme-btn style-two">Savoir plus sur nous</Link>
+                                    <Link href="/" className="theme-btn style-two">Savoir plus sur nous</Link>
                                 </div>
                             </div>
                         </div>
@@ -189,7 +189,7 @@ export default function AboutTwo4() {
                                     </div>
                                 </div>
                                 <div className="author-name-btn">
-                                    <Link href="/a_propos" className="theme-btn style-two">Savoir plus sur nous</Link>
+                                    <Link href="/" className="theme-btn style-two">Savoir plus sur nous</Link>
                                 </div>
                             </div>
                         </div>
