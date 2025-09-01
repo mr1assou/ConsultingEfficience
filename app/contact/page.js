@@ -1,5 +1,7 @@
 "use client"
 import Layout from "@/components/layout/Layout";
+import Image from 'next/image'; // 1. Import the Image component
+import P_Background from '/public/assets/images/background/p.png'; // 2. Import the image file directly
 
 export default function Contact() {
   return (
@@ -9,15 +11,23 @@ export default function Contact() {
         <div
           className="contact-bg"
           style={{
-            backgroundImage: "url('/assets/images/background/p.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
+            position: "relative", // 3. The parent container must have a relative position
             width: "100%",
             minHeight: "100vh",
-            position: "relative",
           }}
         >
+          {/* Use the Image component for the background */}
+          <Image
+            src={P_Background}
+            alt="Decorative background"
+            fill // 4. Use the fill prop to make the image fill the parent
+            style={{
+              objectFit: "cover", // 5. Use objectFit to ensure the image covers the entire area
+              objectPosition: "center", // 6. Center the image
+              zIndex: -1, // 7. Set z-index to a negative value to place it behind content
+            }}
+          />
+
           {/* Gradient Overlay for contrast */}
           <div className="contact-overlay" />
 

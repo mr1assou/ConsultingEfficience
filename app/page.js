@@ -283,30 +283,40 @@ export default function Home() {
 
                 <section id="about" className="about-area bgc-black py-145 rpy-100 rel z-1">
                     <div className="container">
-                        <div className="row justify-content-between ">
-                            <div className="col-lg-6">
-                                <h3 style={{ fontSize: '42px', fontWeight: '800', color: '#183D58', marginBottom: '25px', lineHeight: '1.2', textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>Un organisme de formation qui conjugue excelence commerciale développement de soi</h3>
+                        <div className="row justify-content-between g-10">
+                            <div className="col-lg-6 mb-4 mb-lg-0">   {/* 👈 margin bottom only on mobile */}
+                                <h3
+                                    style={{
+                                        fontSize: '42px',
+                                        fontWeight: '800',
+                                        color: '#183D58',
+                                        marginBottom: '25px',
+                                        lineHeight: '1.2',
+                                        textShadow: '2px 2px 4px rgba(0,0,0,0.1)'
+                                    }}
+                                >
+                                    Un organisme de formation qui conjugue excelence commerciale développement de soi
+                                </h3>
                                 <Image src="/assets/images/hero/eng4.png" alt="Hero" width={700} height={380} priority />
                             </div>
+
                             <div className="col-lg-5">
                                 <div className="about-content wow fadeInRight delay-0-2s">
                                     <div className="section-title mb-30">
-                                        <h5>La certification Qualiopi est un gage de qualité pour nos clients.
-
-
-
+                                        <h5>
+                                            La certification Qualiopi est un gage de qualité pour nos clients.
+                                            <br />
                                             Elle atteste de notre engagement à fournir des formations efficaces et conformes aux exigences des financeurs.
-
-
-
+                                            <br />
                                             Choisir nos services certifiés, c'est opter pour une expérience d'apprentissage à la fois enrichissante et fiable
-
-                                            <i className="fas fa-asterisk" /></h5>
+                                            <i className="fas fa-asterisk" />
+                                        </h5>
                                         <Image src="/assets/images/hero/qualiopi.png" alt="Hero" width={700} height={380} priority />
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </section>
 
