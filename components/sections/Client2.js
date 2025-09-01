@@ -39,7 +39,7 @@ export default function Client2() {
     animation-duration: 10s !important;
   }
   .client-two-area .marquee-inner.right {
-    animation-duration: 12s !important;
+    animation-duration: 14s !important;
   }
 `}</style>
 
