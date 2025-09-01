@@ -12,7 +12,7 @@ import FirstVisitPreloader from "@/components/elements/FirstVisitPreloader"
 import Link from "next/link"
 import Image from "next/image"
 import { useEffect, useState, useRef } from "react"
-
+import VideoPopup from "@/components/elements/VideoPopup"
 
 export default function Home() {
     const [counters, setCounters] = useState({
@@ -81,7 +81,8 @@ export default function Home() {
                                 <div className="about-hero-content pt-50 rpt-95 pb-95">
                                     <h1>Nous sommes créative et professionnelle</h1>
                                     <p>Nous travaillons en étroite collaboration avec nos clients tout au long du processus de conseil, depuis l'analyse initiale jusqu'à la mise en œuvre finale, afin de garantir que nous répondons à leurs attentes et dépassons leurs objectifs.</p>
-                                    <Link href="/contact" className="theme-btn style-two">Contactez-Nous</Link>
+                                    {/* <Link href="/contact" className="theme-btn style-two">Contactez-Nous</Link> */}
+                                    <VideoPopup style={1} />
                                     <div className="row justify-content-center">
                                         <div className="col-lg-6">
                                             {/* <div className="hero-scroll-down mt-60 wow fadeInDown delay-0-6s">
@@ -112,7 +113,7 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="headline-wrap style-three color-black">
+                    {/* <div className="headline-wrap style-three color-black">
                         <span className="marquee-wrap bg-white py-15">
                             <span className="marquee-inner left">
                                 <span className="marquee-item"><b>Prospection & Vente</b><i className="fas fa-bahai" /></span>
@@ -148,49 +149,47 @@ export default function Home() {
                                 <span className="marquee-item"><b>Mieux-être durable</b><i className="fas fa-bahai" /></span>
                             </span>
                         </span>
-                    </div>
+                    </div> */}
                 </section>
 
                 {/* Second Horizontal Autoplay Slider */}
-                <section className="headline-area bgc-primary py-20">
-                    <div className="headline-wrap style-two color-black">
-                        <span className="marquee-wrap">
-                            <span className="marquee-inner left">
-                                <span className="marquee-item"><b>Expertise Financière</b><i className="fas fa-chart-line" /></span>
-                                <span className="marquee-item"><b>Stratégie d'Entreprise</b><i className="fas fa-lightbulb" /></span>
-                                <span className="marquee-item"><b>Innovation & Créativité</b><i className="fas fa-rocket" /></span>
-                                <span className="marquee-item"><b>Excellence Opérationnelle</b><i className="fas fa-cogs" /></span>
-                                <span className="marquee-item"><b>Transformation Digitale</b><i className="fas fa-laptop-code" /></span>
-                                <span className="marquee-item"><b>Développement Durable</b><i className="fas fa-leaf" /></span>
-                                <span className="marquee-item"><b>Performance & Résultats</b><i className="fas fa-trophy" /></span>
-                                <span className="marquee-item"><b>Vision & Stratégie</b><i className="fas fa-eye" /></span>
-                                <span className="marquee-item"><b>Croissance & Expansion</b><i className="fas fa-globe" /></span>
-                            </span>
-                            <span className="marquee-inner left">
-                                <span className="marquee-item"><b>Expertise Financière</b><i className="fas fa-chart-line" /></span>
-                                <span className="marquee-item"><b>Stratégie d'Entreprise</b><i className="fas fa-lightbulb" /></span>
-                                <span className="marquee-item"><b>Innovation & Créativité</b><i className="fas fa-rocket" /></span>
-                                <span className="marquee-item"><b>Excellence Opérationnelle</b><i className="fas fa-cogs" /></span>
-                                <span className="marquee-item"><b>Transformation Digitale</b><i className="fas fa-laptop-code" /></span>
-                                <span className="marquee-item"><b>Développement Durable</b><i className="fas fa-leaf" /></span>
-                                <span className="marquee-item"><b>Performance & Résultats</b><i className="fas fa-trophy" /></span>
-                                <span className="marquee-item"><b>Vision & Stratégie</b><i className="fas fa-eye" /></span>
-                                <span className="marquee-item"><b>Croissance & Expansion</b><i className="fas fa-globe" /></span>
-                            </span>
-                            <span className="marquee-inner left">
-                                <span className="marquee-item"><b>Expertise Financière</b><i className="fas fa-chart-line" /></span>
-                                <span className="marquee-item"><b>Stratégie d'Entreprise</b><i className="fas fa-lightbulb" /></span>
-                                <span className="marquee-item"><b>Innovation & Créativité</b><i className="fas fa-rocket" /></span>
-                                <span className="marquee-item"><b>Excellence Opérationnelle</b><i className="fas fa-cogs" /></span>
-                                <span className="marquee-item"><b>Transformation Digitale</b><i className="fas fa-laptop-code" /></span>
-                                <span className="marquee-item"><b>Développement Durable</b><i className="fas fa-leaf" /></span>
-                                <span className="marquee-item"><b>Performance & Résultats</b><i className="fas fa-trophy" /></span>
-                                <span className="marquee-item"><b>Vision & Stratégie</b><i className="fas fa-eye" /></span>
-                                <span className="marquee-item"><b>Croissance & Expansion</b><i className="fas fa-globe" /></span>
-                            </span>
+                <div className="headline-wrap style-three color-black mt-25">
+                    <span className="marquee-wrap bg-white py-15">
+                        <span className="marquee-inner left">
+                            <span className="marquee-item"><b>Prospection & Vente</b><i className="fas fa-bahai" /></span>
+                            <span className="marquee-item"><b>Négociation</b><i className="fas fa-bahai" /></span>
+                            <span className="marquee-item"><b>Management</b><i className="fas fa-bahai" /></span>
+                            <span className="marquee-item"><b>Communication & Influence</b><i className="fas fa-bahai" /></span>
+                            <span className="marquee-item"><b>Développement personnel</b><i className="fas fa-bahai" /></span>
+                            <span className="marquee-item"><b>Leadership</b><i className="fas fa-bahai" /></span>
+                            <span className="marquee-item"><b>Posture professionnelle</b><i className="fas fa-bahai" /></span>
+                            <span className="marquee-item"><b>Croissance personnelle</b><i className="fas fa-bahai" /></span>
+                            <span className="marquee-item"><b>Mieux-être durable</b><i className="fas fa-bahai" /></span>
                         </span>
-                    </div>
-                </section>
+                        <span className="marquee-inner left">
+                            <span className="marquee-item"><b>Prospection & Vente</b><i className="fas fa-bahai" /></span>
+                            <span className="marquee-item"><b>Négociation</b><i className="fas fa-bahai" /></span>
+                            <span className="marquee-item"><b>Management</b><i className="fas fa-bahai" /></span>
+                            <span className="marquee-item"><b>Communication & Influence</b><i className="fas fa-bahai" /></span>
+                            <span className="marquee-item"><b>Développement personnel</b><i className="fas fa-bahai" /></span>
+                            <span className="marquee-item"><b>Leadership</b><i className="fas fa-bahai" /></span>
+                            <span className="marquee-item"><b>Posture professionnelle</b><i className="fas fa-bahai" /></span>
+                            <span className="marquee-item"><b>Croissance personnelle</b><i className="fas fa-bahai" /></span>
+                            <span className="marquee-item"><b>Mieux-être durable</b><i className="fas fa-bahai" /></span>
+                        </span>
+                        <span className="marquee-inner left">
+                            <span className="marquee-item"><b>Prospection & Vente</b><i className="fas fa-bahai" /></span>
+                            <span className="marquee-item"><b>Négociation</b><i className="fas fa-bahai" /></span>
+                            <span className="marquee-item"><b>Management</b><i className="fas fa-bahai" /></span>
+                            <span className="marquee-item"><b>Communication & Influence</b><i className="fas fa-bahai" /></span>
+                            <span className="marquee-item"><b>Développement personnel</b><i className="fas fa-bahai" /></span>
+                            <span className="marquee-item"><b>Leadership</b><i className="fas fa-bahai" /></span>
+                            <span className="marquee-item"><b>Posture professionnelle</b><i className="fas fa-bahai" /></span>
+                            <span className="marquee-item"><b>Croissance personnelle</b><i className="fas fa-bahai" /></span>
+                            <span className="marquee-item"><b>Mieux-être durable</b><i className="fas fa-bahai" /></span>
+                        </span>
+                    </span>
+                </div>
 
                 <About1 />
 
@@ -200,8 +199,20 @@ export default function Home() {
                             <div className="col-lg-4">
                                 <div className="our-experience-years rmb-55 wow fadeInLeft delay-0-2s">
                                     <span className="years">12</span>
-                                    <span className="text" style={{ color: '#ffffff', textShadow: '3px 3px 6px rgba(0,0,0,0.8), 0 0 20px rgba(255,255,255,0.3)', fontWeight: 'bold', fontSize: '58px', letterSpacing: '2px' }}>années d'expérience</span>
+                                    <span
+                                        className="text"
+                                        style={{
+                                            color: '#ffffff',
+                                            textShadow: '3px 3px 6px rgba(0,0,0,0.8), 0 0 20px rgba(255,255,255,0.3)',
+                                            fontWeight: 'bold',
+                                            fontSize: 'clamp(28px, 5vw, 58px)', // 👈 responsive font
+                                            letterSpacing: '2px'
+                                        }}
+                                    >
+                                        années d'expérience
+                                    </span>
                                 </div>
+
                             </div>
                             <div className="col-lg-7">
                                 <div className="about-content wow fadeInRight delay-0-2s">
@@ -214,6 +225,7 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
+
 
                 <div ref={counterRef} className="counter-two-area pt-45 pb-140" style={{ backgroundColor: '#f8f9fa', padding: '60px 0 140px 0' }}>
                     <div className="container">
@@ -238,6 +250,7 @@ export default function Home() {
                                 borderRadius: '2px'
                             }}></div>
                         </div>
+
                         <div className="row no-gap">
                             <div className="col-lg-3 col-6 col-small">
                                 <div className="counter-item-two counter-text-wrap wow fadeInUp delay-0-2s" style={{ textAlign: 'center', padding: '30px 15px', backgroundColor: '#ffffff', borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)', margin: '10px', border: '2px solid #e9ecef' }}>
@@ -266,10 +279,43 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
+
+
+                <section id="about" className="about-area bgc-black py-145 rpy-100 rel z-1">
+                    <div className="container">
+                        <div className="row justify-content-between ">
+                            <div className="col-lg-6">
+                                <h3 style={{ fontSize: '42px', fontWeight: '800', color: '#183D58', marginBottom: '25px', lineHeight: '1.2', textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>Un organisme de formation qui conjugue excelence commerciale développement de soi</h3>
+                                <Image src="/assets/images/hero/eng4.png" alt="Hero" width={700} height={380} priority />
+                            </div>
+                            <div className="col-lg-5">
+                                <div className="about-content wow fadeInRight delay-0-2s">
+                                    <div className="section-title mb-30">
+                                        <h5>La certification Qualiopi est un gage de qualité pour nos clients.
+
+
+
+                                            Elle atteste de notre engagement à fournir des formations efficaces et conformes aux exigences des financeurs.
+
+
+
+                                            Choisir nos services certifiés, c'est opter pour une expérience d'apprentissage à la fois enrichissante et fiable
+
+                                            <i className="fas fa-asterisk" /></h5>
+                                        <Image src="/assets/images/hero/qualiopi.png" alt="Hero" width={700} height={380} priority />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <Video2 />
+
                 <Client2 />
                 <Testimonials2 />
                 <LetsTalk1 />
+
             </Layout>
             <style jsx global>{`
                   .bottom-ribbon-bg {
@@ -283,23 +329,22 @@ export default function Home() {
                 `}</style>
 
             {/* Bottom background pattern */}
-            <div className="bottom-ribbon-bg" aria-hidden>
+            {/* <div className="bottom-ribbon-bg" aria-hidden>
                 <svg
                     width="100%" height="100%"
                     viewBox="0 0 1920 300"
                     preserveAspectRatio="xMidYMid slice"
                     xmlns="http://www.w3.org/2000/svg"
                 >
-                    {/* Left navy shape */}
+             
                     <polygon points="0,300 0,100 960,300" fill="var(--secondary-color)" />
 
-                    {/* Right navy shape reaching center */}
+                 
                     <polygon points="1920,300 1920,100 960,300" fill="var(--secondary-color)" />
 
-                    {/* Green triangle in the middle */}
                     <polygon points="480,300 960,100 1440,300" fill="var(--primary-color)" />
                 </svg>
-            </div>
+            </div> */}
         </FirstVisitPreloader>
     )
 }

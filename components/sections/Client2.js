@@ -34,13 +34,21 @@ export default function Client2() {
   }
 `}</style>
 
+<style jsx global>{`
+  .client-two-area .marquee-inner.left {
+    animation-duration: 10s !important;
+  }
+  .client-two-area .marquee-inner.right {
+    animation-duration: 12s !important;
+  }
+`}</style>
 
 
 
             <div id="client" className="client-two-area pt-120 rpt-90 pb-110 rpb-60" style={{ filter: 'none' }}>
                 <div className="container">
                     <div className="section-title mb-20 rmb-35">
-                        <h2 style={{ color: 'var(--primary-color)' }}>Nos Partenaires</h2>
+                        <h2 style={{ color: 'var(--primary-color)' }}>Nos références</h2>
                     </div>
                     <div className="headline-area">
                         <div className="container-fluid">

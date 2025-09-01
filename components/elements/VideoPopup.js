@@ -14,27 +14,29 @@ export default function VideoPopup({ style }) {
                 <a
                     href="/assets/images/hero/plaquette.pdf"
                     download
-                    className="hero-cta"
+                    className="theme-btn style-two" style={{gap:"8px"}}
                 >
                     <FaCloudDownloadAlt className='download' />
                     Télécharger Le Catalogue
-                </a>    
+                </a>
             }
             {style === 2 &&
                 <a
                     href="/assets/images/hero/stagiare.pdf"
                     download
                     className="hero-cta"
+                    style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}
                 >
-                    <FaCloudDownloadAlt className='download' />
+                    <FaCloudDownloadAlt className="download" />
                     Téléchargez Règlement intérieur
-                </a> 
+                </a>
+
             }
             {style === 3 &&
-                     <Link href="/contact" className="contactez">Contactez-nous</Link>
+                <Link href="/contact" className="contactez">Contactez-nous</Link>
             }
             {style === 4 &&
-                     <Link href="/contact" className="contactez" style={{visibility:"hidden"}}>Contactez-nous</Link>
+                <Link href="/contact" className="contactez" style={{ visibility: "hidden" }}>Contactez-nous</Link>
             }
             <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="vfhzo499OeA" onClose={() => setOpen(false)} />
         </>

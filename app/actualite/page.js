@@ -44,28 +44,7 @@ export default function Blog2() {
   }
 `}</style>
 
-      <style jsx global>{`
-  /* Left-side background, behind all content */
-  .left-ribbon-bg{
-    position: fixed;
-    inset: 0 auto 0 0;   /* stick to the left */
-    width: min(26vw, 420px);
-    height: 100vh;
-    z-index: -1;
-    pointer-events: none;
-    filter: drop-shadow(10px 0 30px rgba(0,0,0,.15)); /* shadow opposite side */
-  }
-
-  @media (max-width: 992px){
-    .left-ribbon-bg{ width: 32vw; }
-  }
-  @media (max-width: 768px){
-    .left-ribbon-bg{ width: 40vw; opacity:.6; }
-  }
-  @media (max-width: 520px){
-    .left-ribbon-bg{ display:none; }
-  }
-`}</style>
+   
       {/* Right-side geometric ribbon (UNDER all components) */}
       <div className="right-ribbon-bg" aria-hidden>
         <svg
@@ -81,21 +60,7 @@ export default function Blog2() {
           <polygon points="240,180 190,420 175,430 225,185" fill="#ffffff" opacity=".06" />
         </svg>
       </div>
-      <div className="left-ribbon-bg" aria-hidden>
-        <svg
-          width="100%" height="100%" viewBox="0 0 300 1000"
-          preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"
-        >
-          <polygon points="300,0 0,0 60,180 140,220" fill="var(--secondary-color)" />
-          <polygon points="140,220 60,180 110,420 210,500" fill="var(--primary-color)" />
-          <polygon points="210,500 110,420 40,620 100,700" fill="var(--secondary-color)" />
-          <polygon points="100,700 40,620 0,920 170,1000" fill="var(--primary-color)" />
-
-          {/* subtle white highlights for depth */}
-          <polygon points="110,420 40,620 55,635 125,455" fill="#ffffff" opacity=".06" />
-          <polygon points="60,180 110,420 125,430 75,185" fill="#ffffff" opacity=".06" />
-        </svg>
-      </div>
+    
       <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="blog page">
 
         <div>
@@ -119,7 +84,7 @@ export default function Blog2() {
                     </div>
 
                    
-                    <Image width={1100} height={600} priority src="/assets/images/blog/act1.png" alt="Blog" />
+                    <Image width={700} height={500} priority src="/assets/images/blog/act1.png" alt="Blog" />
                  
                   </div>
 

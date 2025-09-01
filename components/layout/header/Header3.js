@@ -4,13 +4,13 @@ import Menu from "../Menu"
 
 
 
-export default function Header3({ scroll, isMobileMenu, handleMobileMenu, isSidebar, handleSidebar }) {
+export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSidebar, handleSidebar }) {
 
     return (
         <>
-            <header className={`main-header ${scroll ? "fixed-header" : ""}` } style={{background:"#FFFFFF"}}>
+            <header className={`main-header ${scroll ? "fixed-header" : ""}`}>
                 {/*Header-Upper*/}
-                <div className="header-upper">
+                <div className="header-upper" style={{background:"#FFFFFF"}}>
                     <div className="container container-1695 clearfix">
                         <div className="header-inner rpy-10 rel d-flex align-items-center">
                             <div className="logo-outer">
@@ -60,8 +60,7 @@ export default function Header3({ scroll, isMobileMenu, handleMobileMenu, isSide
                                 <div className="menu-sidebar" onClick={handleSidebar}>
                                     <button><img src="/assets/images/icons/toggler.svg" alt="Toggler" /></button>
                                 </div>
-                                <Link href="/contact" className="theme-btn">Contactez</Link>
-                                
+                                <Link href="/contact" className="theme-btn" >Contactez</Link>
                             </div>
                         </div>
                     </div>

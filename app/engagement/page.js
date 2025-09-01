@@ -14,8 +14,8 @@ export default function Portfolio() {
                     <section id="about" className="about-area bgc-black py-145 rpy-100 rel z-1">
                         <div className="container">
                             <div className="row justify-content-between g-5">
-                                <div className="col-lg-6">
-                                    <Image src="/assets/images/hero/eng.png" alt="Hero" width={700} height={380} priority />
+                                <div className="col-lg-5">
+                                    <Image src="/assets/images/hero/eng.png" alt="Hero" width={900} height={380} priority />
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="about-content wow fadeInRight delay-0-2s">
@@ -50,16 +50,16 @@ export default function Portfolio() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-6">
+                                <div className="col-lg-5">
                                     <Image width={700} height={380} priority src="/assets/images/hero/eng2.png" alt="Hero" />
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <section id="about" className="about-area bgc-black py-145 rpy-100 rel z-1">
+                    <section id="about" className="about-area bgc-black py-40 rpy-100 rel z-1">
                         <div className="container">
                             <div className="row justify-content-between g-5">
-                                <div className="col-lg-6">
+                                <div className="col-lg-5">
                                     <Image width={700} height={380} priority src="/assets/images/hero/eng3.png" alt="Hero" />
                                 </div>
                                 <div className="col-lg-6">
@@ -99,23 +99,20 @@ export default function Portfolio() {
                 `}</style>
                 
                             {/* Bottom background pattern */}
-                            <div className="bottom-ribbon-bg" aria-hidden>
+                            {/* <div className="bottom-ribbon-bg" aria-hidden>
                                 <svg
                                     width="100%" height="100%"
                                     viewBox="0 0 1920 300"
                                     preserveAspectRatio="xMidYMid slice"
                                     xmlns="http://www.w3.org/2000/svg"
                                 >
-                                    {/* Left navy shape */}
                                     <polygon points="0,300 0,100 960,300" fill="var(--secondary-color)" />
                 
-                                    {/* Right navy shape reaching center */}
                                     <polygon points="1920,300 1920,100 960,300" fill="var(--secondary-color)" />
                 
-                                    {/* Green triangle in the middle */}
                                     <polygon points="480,300 960,100 1440,300" fill="var(--primary-color)" />
                                 </svg>
-                            </div>
+                            </div> */}
         </>
     )
 }

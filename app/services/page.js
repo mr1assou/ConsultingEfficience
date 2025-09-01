@@ -72,23 +72,23 @@ export default function Service() {
                 `}</style>
 
             {/* Bottom background pattern */}
-            <div className="bottom-ribbon-bg" aria-hidden>
+            {/* <div className="bottom-ribbon-bg" aria-hidden>
                 <svg
                     width="100%" height="100%"
                     viewBox="0 0 1920 300"
                     preserveAspectRatio="xMidYMid slice"
                     xmlns="http://www.w3.org/2000/svg"
                 >
-                    {/* Left navy shape */}
+               
                     <polygon points="0,300 0,100 960,300" fill="var(--secondary-color)" />
 
-                    {/* Right navy shape reaching center */}
+               
                     <polygon points="1920,300 1920,100 960,300" fill="var(--secondary-color)" />
 
-                    {/* Green triangle in the middle */}
+                
                     <polygon points="480,300 960,100 1440,300" fill="var(--primary-color)" />
                 </svg>
-            </div>
+            </div> */}
         </FirstVisitPreloader>
     )
 }

@@ -5,9 +5,9 @@ import Image from "next/image"
 export default function AboutTwo4() {
     return (
         <>
-            <section id="about" className="about-two-area pt-135 pb-85 rpt-100 rpb-50 rel z-1 ">
+            <section id="about" className="about-two-area pt-90 pb-85 rpt-100 rpb-50 rel z-1 ">
                 <div className="container">
-                    <div className="row gap-110 align-items-center">
+                    <div className="row gap-60 align-items-center">
                         <div className="col-xl-6 wow fadeInRight delay-0-2s">
                             <div className="about-three-images mb-50">
                                 <div className="image">
@@ -65,7 +65,7 @@ export default function AboutTwo4() {
                             </div>
                         </div>
                     </div>
-                    <div className="row gap-110 align-items-center">
+                    <div className="row gap-60 align-items-center">
                         <div className="col-xl-6 wow fadeInRight delay-0-2s">
                             <div className="about-three-images mb-50">
 
@@ -129,7 +129,7 @@ export default function AboutTwo4() {
                         </div>
 
                     </div>
-                    <div className="row gap-110 align-items-center">
+                    <div className="row gap-60 align-items-center">
                         <div className="col-xl-6 wow fadeInRight delay-0-2s">
                             <div className="about-three-images mb-50">
 
@@ -148,7 +148,7 @@ export default function AboutTwo4() {
                                     <div className="col-md-6">
                                         <div className="service-item wow fadeInUp delay-0-2s">
                                             <div className="content">
-                                                <h6><Link href="/service-details">Former plus, sans dépenser plus :</Link></h6>
+                                                <h6><Link href="/service-details">Former plus, sans dépenser plus </Link></h6>
                                                 <p>Vos budgets FAF/OPCO sont entièrement mobilisés
                                                     pour financer vos besoins.
                                                 </p>
@@ -158,7 +158,7 @@ export default function AboutTwo4() {
                                     <div className="col-md-6">
                                         <div className="service-item wow fadeInUp delay-0-6s">
                                             <div className="content">
-                                                <h6><Link href="/service-details">Une trésorerie protégée :
+                                                <h6><Link href="/service-details">Une trésorerie protégée 
                                                 </Link></h6>
                                                 <p>Vous transformez vos cotisations obligatoires en
                                                     investissement rentable.</p>
@@ -168,7 +168,7 @@ export default function AboutTwo4() {
                                     <div className="col-md-6">
                                         <div className="service-item wow fadeInUp delay-0-6s">
                                             <div className="content">
-                                                <h6><Link href="/service-details">Des équipes qui montent en compétence :
+                                                <h6><Link href="/service-details">Des équipes qui montent en compétence 
                                                 </Link></h6>
                                                 <p>Plus efficaces, plus motivées, et directement
                                                     opérationnelles.
@@ -179,7 +179,7 @@ export default function AboutTwo4() {
                                     <div className="col-md-6" style={{ visibility: 'hidden' }}>
                                         <div className="service-item wow fadeInUp delay-0-6s">
                                             <div className="content">
-                                                <h6><Link href="/service-details">Des équipes qui montent en compétence :
+                                                <h6><Link href="/service-details">Des équipes qui montent en compétence 
                                                 </Link></h6>
                                                 <p>Plus efficaces, plus motivées, et directement
                                                     opérationnelles.

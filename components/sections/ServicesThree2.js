@@ -43,11 +43,11 @@ export default function ServicesThree2() {
 
                 <div className="hover-content">
 
-                  <h6>Formation</h6>
+                  <h6 style={{color:"white"}}>Formation</h6>
                 </div>
 
                 <div className="content">
-                  <h6>Formation</h6>
+                  <h6 style={{color:"white"}}>Formation</h6>
                   <p>
                     Nous offrons des programmes sur mesure, interactifs et adaptés pour développer les compétences clés
                     et optimiser la performance professionnelle
@@ -60,7 +60,7 @@ export default function ServicesThree2() {
             <div className="col-xl-4 col-lg-5 col-md-6 col-sm-8">
               <Link href="/coaching" className="service-style-three wow fadeInUp delay-0-3s">
                 <div className="image">
-                  <Image src="/assets/images/services/service2.jpg" width={370} height={277} priority alt="Service" />
+                  <Image src="/assets/images/services/service6.png" width={370} height={277} priority alt="Service" />
                 </div>
 
                 {/* was <Link> —> replace by span */}
@@ -70,11 +70,11 @@ export default function ServicesThree2() {
 
                 <div className="hover-content">
        
-                  <h6>Coaching</h6>
+                  <h6 style={{color:"white"}}>Coaching</h6>
                 </div>
 
                 <div className="content">
-                  <h6>Coaching</h6>
+                  <h6 style={{color:"white"}}>Coaching</h6>
                   <p>
                     Nous proposons un coaching personnalisé, axé sur le développement des compétences, le renforcement
                     du leadership et l’accompagnement vers l’atteinte des objectifs professionnels
