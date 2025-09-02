@@ -84,7 +84,26 @@ export default function Blog2() {
                     </div>
 
                    
-                    <Image width={700} height={500} priority src="/assets/images/blog/act1.png" alt="Blog" />
+                    <div className="image-wrapper" style={{
+                        borderRadius: '15px',
+                        overflow: 'hidden',
+                        boxShadow: '0 15px 35px rgba(0,0,0,0.1)',
+                        marginBottom: '20px'
+                    }}>
+                        <Image 
+                            width={700} 
+                            height={500} 
+                            priority 
+                            src="/assets/images/blog/act1.png" 
+                            alt="Blog" 
+                            style={{
+                                width: '100%',
+                                height: 'auto',
+                                maxWidth: '100%',
+                                display: 'block'
+                            }}
+                        />
+                    </div>
                  
                   </div>
 
