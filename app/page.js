@@ -153,7 +153,7 @@ export default function Home() {
                 </section>
 
                 {/* Second Horizontal Autoplay Slider */}
-                   <div className="headline-wrap style-three color-black mt-25">
+                <div className="headline-wrap style-three color-black mt-25">
                     <span className="marquee-wrap bg-white py-15">
                         <span className="marquee-inner left">
                             <span className="marquee-item"><b>Prospection & Vente</b><i className="fas fa-bahai" /></span>
@@ -196,13 +196,13 @@ export default function Home() {
                 <section id="about" className="about-area bgc-black py-145 rpy-100 rel z-1">
                     <div className="container">
                         <div className="row justify-content-between">
-                            <div className="col-lg-4">
+                            <div className="col-lg-4 col-md-6 col-sm-12">
                                 <div className="our-experience-years rmb-55 wow fadeInLeft delay-0-2s">
                                     <span className="years">12</span>
                                     <span className="text" style={{ color: '#ffffff', textShadow: '3px 3px 6px rgba(0,0,0,0.8), 0 0 20px rgba(255,255,255,0.3)', fontWeight: 'bold', fontSize: '58px', letterSpacing: '2px' }}>années d'expérience</span>
                                 </div>
                             </div>
-                            <div className="col-lg-7">
+                            <div className="col-lg-7 col-md-6 col-sm-12">
                                 <div className="about-content wow fadeInRight delay-0-2s">
                                     <div className="section-title mb-30">
                                         <span className="sub-title mb-15">Notre objectif</span>
@@ -268,7 +268,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                
+
                 <section id="about" className="about-area bgc-black py-145 rpy-100 rel z-1">
                     <div className="container">
                         <div className="row justify-content-between align-items-center g-5">
@@ -288,7 +288,7 @@ export default function Home() {
                                                     width={700} 
                                                     height={380} 
                                                     priority
-                                                    style={{
+                                    style={{
                                                         width: '100%',
                                                         height: 'auto',
                                                         maxWidth: '100%',
@@ -309,7 +309,7 @@ export default function Home() {
                                                 <h6 style={{
                                                     fontSize: '16px',
                                                     fontWeight: '600',
-                                                    color: '#183D58',
+                                        color: '#183D58',
                                                     marginBottom: '15px'
                                                 }}>
                                                     Certification Qualiopi
@@ -420,7 +420,7 @@ export default function Home() {
                 <Client2 />
                 <Testimonials2 />
                 <LetsTalk1 />
-                
+
             </Layout>
             <style jsx global>{`
                   .bottom-ribbon-bg {
