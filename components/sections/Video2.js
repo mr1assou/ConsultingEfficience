@@ -52,6 +52,15 @@ export default function Video2() {
                     </div>
                 </div>
             </div>
+
+            {/* Hide autoscroll slider on mobile and tablet */}
+            <style jsx global>{`
+                @media (max-width: 991px) {
+                    .video-area-two .headline-wrap {
+                        display: none !important;
+                    }
+                }
+            `}</style>
         </>
     )
 }
