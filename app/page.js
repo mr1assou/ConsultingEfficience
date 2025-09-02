@@ -271,26 +271,143 @@ export default function Home() {
                 
                 <section id="about" className="about-area bgc-black py-145 rpy-100 rel z-1">
                     <div className="container">
-                        <div className="row justify-content-between align-items-end g-5">
+                        <div className="row justify-content-between align-items-center g-5">
                             <div className="col-lg-6">
-                                <h3 style={{ fontSize: '42px', fontWeight: '800', color: '#183D58', marginBottom: '25px', lineHeight: '1.2', textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>Un organisme de formation qui conjugue excelence commerciale développement de soi</h3>
-                                <Image src="/assets/images/hero/eng4.png" alt="Hero" width={700} height={380} priority />
+                                <div className="about-images wow fadeInLeft delay-0-2s">
+                                    <div className="row g-4">
+                                        <div className="col-12">
+                                            <div className="about-image-wrapper" style={{
+                                                borderRadius: '15px',
+                                                overflow: 'hidden',
+                                                boxShadow: '0 15px 35px rgba(0,0,0,0.1)',
+                                                marginBottom: '20px'
+                                            }}>
+                                                <Image 
+                                                    src="/assets/images/hero/eng4.png" 
+                                                    alt="Excellence commerciale et développement de soi" 
+                                                    width={700} 
+                                                    height={380} 
+                                                    priority
+                                                    style={{
+                                                        width: '100%',
+                                                        height: 'auto',
+                                                        maxWidth: '100%',
+                                                        display: 'block'
+                                                    }}
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="col-12">
+                                            <div className="qualiopi-certification" style={{
+                                                textAlign: 'center',
+                                                padding: '20px',
+                                                backgroundColor: '#f8f9fa',
+                                                borderRadius: '12px',
+                                                border: '2px solid #e9ecef',
+                                                marginTop: '10px'
+                                            }}>
+                                                <h6 style={{
+                                                    fontSize: '16px',
+                                                    fontWeight: '600',
+                                                    color: '#183D58',
+                                                    marginBottom: '15px'
+                                                }}>
+                                                    Certification Qualiopi
+                                                </h6>
+                                                <div className="qualiopi-image-wrapper" style={{
+                                                    borderRadius: '10px',
+                                                    overflow: 'hidden',
+                                                    boxShadow: '0 8px 25px rgba(0,0,0,0.08)',
+                                                    maxWidth: '300px',
+                                                    margin: '0 auto'
+                                                }}>
+                                                    <Image
+                                                        src="/assets/images/hero/qualiopi.png"
+                                                        alt="Certification Qualiopi"
+                                                        width={300}
+                                                        height={200}
+                                                        priority
+                                                        style={{
+                                                            width: '100%',
+                                                            height: 'auto',
+                                                            maxWidth: '100%',
+                                                            display: 'block'
+                                                        }}
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="col-lg-5">
+                            <div className="col-lg-6">
                                 <div className="about-content wow fadeInRight delay-0-2s">
                                     <div className="section-title mb-30">
-                                        <h5>La certification Qualiopi est un gage de qualité pour nos clients.
+                                        <span className="sub-title mb-15" style={{
+                                            display: 'block',
+                                            fontSize: '18px',
+                                            fontWeight: '600',
+                                            color: '#307926',
+                                            textTransform: 'uppercase',
+                                            letterSpacing: '1px',
+                                            marginBottom: '20px'
+                                        }}>
+                                            Excellence & Certification
+                                        </span>
+                                        <h3 style={{
+                                            fontSize: 'clamp(32px, 4vw, 42px)',
+                                            fontWeight: '800',
+                                            color: '#183D58',
+                                            marginBottom: '30px',
+                                            lineHeight: '1.2',
+                                            textShadow: '2px 2px 4px rgba(0,0,0,0.1)'
+                                        }}>
+                                            Un organisme de formation qui conjugue <span style={{ color: '#307926' }}>excellence commerciale</span> et <span style={{ color: '#307926' }}>développement de soi</span>
+                                        </h3>
+                                        
+                                        <div style={{ marginBottom: '25px' }}>
+                                            <p style={{
+                                                fontSize: 'clamp(16px, 2.5vw, 18px)',
+                                                lineHeight: '1.8',
+                                                color: '#183D58',
+                                                fontWeight: '500',
+                                                marginBottom: '20px'
+                                            }}>
+                                                La <strong>certification Qualiopi</strong> est un gage de qualité pour nos clients.
+                                            </p>
+                                        </div>
 
+                                        <div style={{ marginBottom: '25px' }}>
+                                            <p style={{
+                                                fontSize: 'clamp(16px, 2.5vw, 18px)',
+                                                lineHeight: '1.8',
+                                                color: '#183D58',
+                                                fontWeight: '500',
+                                                marginBottom: '20px'
+                                            }}>
+                                                Elle atteste de notre engagement à fournir des formations <strong>efficaces et conformes</strong> aux exigences des financeurs.
+                                            </p>
+                                        </div>
 
-
-                                            Elle atteste de notre engagement à fournir des formations efficaces et conformes aux exigences des financeurs.
-
-
-
-                                            Choisir nos services certifiés, c'est opter pour une expérience d'apprentissage à la fois enrichissante et fiable
-
-                                            <i className="fas fa-asterisk" /></h5>
-                                         <Image src="/assets/images/hero/qualiopi.png" alt="Hero" width={700} height={380} priority />
+                                        <div style={{
+                                            padding: '25px',
+                                            backgroundColor: '#f8f9fa',
+                                            borderRadius: '15px',
+                                            borderLeft: '4px solid #307926',
+                                            marginTop: '30px'
+                                        }}>
+                                            <p style={{
+                                                fontSize: 'clamp(18px, 3vw, 20px)',
+                                                lineHeight: '1.6',
+                                                color: '#183D58',
+                                                fontWeight: '700',
+                                                margin: 0,
+                                                textAlign: 'center',
+                                                fontStyle: 'italic'
+                                            }}>
+                                                Choisir nos services certifiés, c'est opter pour une expérience d'apprentissage à la fois enrichissante et fiable <i className="fas fa-asterisk" style={{ color: '#307926', marginLeft: '8px' }} />
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
