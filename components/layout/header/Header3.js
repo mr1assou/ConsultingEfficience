@@ -8,12 +8,12 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSide
 
     return (
         <>
-            <header className={`main-header ${scroll ? "fixed-header" : ""}`}>
+            <header className={`main-header ${scroll ? "fixed-header" : ""} py-10 `}>
                 {/*Header-Upper*/}
                 <div className="header-upper" style={{background:"#FFFFFF"}}>
                     <div className="container container-1695 clearfix">
                         <div className="header-inner rpy-10 rel d-flex align-items-center">
-                            <div className="logo-outer">
+                            <div className="logo-outer py-5">
                                 <div className="logo"><Link href="/"><img src="/assets/images/logos/logo.png" alt="Logo" title="Logo" /></Link></div>
                             </div>
                             <div className="nav-outer ms-lg-auto clearfix">

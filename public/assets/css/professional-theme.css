@@ -161,18 +161,18 @@ section, .section, .about-section, .service-section, .team-section, .blog-sectio
 
 /* Enhanced Card Styles */
 .card, .service-item, .team-item, .blog-item {
-    background: #FFFFFF;
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    box-shadow: 0 2px 20px rgba(24, 61, 88, 0.08);
+    /* background: #FFFFFF; */
+    /* border: 1px solid var(--border-color); */
+    /* border-radius: 12px; */
+    /* box-shadow: 0 2px 20px rgba(24, 61, 88, 0.08); */
     transition: all 0.3s ease;
 }
 
-.card:hover, .service-item:hover, .team-item:hover, .blog-item:hover {
+/* .card:hover, .service-item:hover, .team-item:hover, .blog-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 30px rgba(24, 61, 88, 0.15);
     border-color: var(--primary-color);
-}
+} */
 
 /* Enhanced Section Styling */
 .section-padding {

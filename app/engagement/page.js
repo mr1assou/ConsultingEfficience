@@ -14,7 +14,7 @@ export default function Portfolio() {
                     <section id="about" className="about-area bgc-black py-145 rpy-100 rel z-1">
                         <div className="container">
                             <div className="row justify-content-between align-items-center g-5">
-                                <div className="col-lg-5">
+                                <div className="col-lg-7">
                                     <div className="about-image-wrapper wow fadeInLeft delay-0-2s" style={{
                                         borderRadius: '15px',
                                         overflow: 'hidden',
@@ -23,7 +23,7 @@ export default function Portfolio() {
                                         <Image 
                                             src="/assets/images/hero/eng.png" 
                                             alt="Formation responsable et développement durable" 
-                                            width={900} 
+                                            width={700} 
                                             height={380} 
                                             priority
                                             style={{
@@ -35,7 +35,7 @@ export default function Portfolio() {
                                         />
                                     </div>
                                 </div>
-                                <div className="col-lg-6">
+                                <div className="col-lg-4">
                                     <div className="about-content wow fadeInRight delay-0-2s">
                                         <div className="section-title mb-30">
                                             <span className="sub-title mb-15" style={{
@@ -101,7 +101,7 @@ export default function Portfolio() {
                     <section id="about" className="about-area bgc-black py-145 rpy-100 rel z-1">
                         <div className="container">
                             <div className="row justify-content-between align-items-center">
-                                <div className="col-lg-6">
+                                <div className="col-lg-4">
                                     <div className="about-content wow fadeInRight delay-0-2s">
                                         <div className="section-title mb-30">
                                             <span className="sub-title mb-15" style={{
@@ -217,7 +217,7 @@ export default function Portfolio() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-5">
+                                <div className="col-lg-7">
                                     <div className="about-image-wrapper wow fadeInLeft delay-0-2s" style={{
                                         borderRadius: '15px',
                                         overflow: 'hidden',
@@ -245,7 +245,7 @@ export default function Portfolio() {
                     <section id="about" className="about-area bgc-black py-40 rpy-100 rel z-1">
                         <div className="container">
                             <div className="row justify-content-between align-items-center g-5">
-                                <div className="col-lg-5">
+                                <div className="col-lg-7">
                                     <div className="about-image-wrapper wow fadeInLeft delay-0-2s" style={{
                                         borderRadius: '15px',
                                         overflow: 'hidden',
@@ -266,7 +266,7 @@ export default function Portfolio() {
                                         />
                                     </div>
                                 </div>
-                                <div className="col-lg-6">
+                                <div className="col-lg-4">
                                     <div className="about-content wow fadeInRight delay-0-2s">
                                         <div className="section-title mb-30">
                                             <span className="sub-title mb-15" style={{

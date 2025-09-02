@@ -4,7 +4,6 @@ import Layout from "@/components/layout/Layout";
 import AboutTwo4 from "@/components/sections/AboutTwo4";
 import ServicesFour4 from "@/components/sections/ServicesFour4";
 import LeftEdgePattern from "@/components/elements/LeftEdgePatter";
-import Image from "next/image";
 
 export default function Home3() {
   // ✅ taille du badge responsive
@@ -96,12 +95,9 @@ export default function Home3() {
             borderRadius: "50%",
           }}
         >
-          <Image
+          <img
             src="/assets/images/hero/qualiopi.png"
             alt="Qualiopi"
-            width={200}
-            height={200}
-            priority
             style={{
               height: "auto",
               maxWidth: "100%",

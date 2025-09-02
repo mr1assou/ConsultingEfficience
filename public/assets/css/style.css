@@ -4609,22 +4609,22 @@ h6,
 .main-header .logo {
     z-index: 9;
     position: relative;
-    width: 115px;
+    width: 160px;
 }
 
 @media only screen and (max-width: 1400px) {
 .main-header .logo{
-        width: 80px;
+        width: 100px;
     }
 }
 @media only screen and (max-width: 1280px) {
 .main-header .logo{
-        width: 75px;
+        width: 90px;
     }
 }
 @media only screen and (max-width: 1200px) {
 .main-header .logo{
-        width: 65px;
+        width: 80px;
     }
 }
 
