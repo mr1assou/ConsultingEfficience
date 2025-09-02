@@ -57,9 +57,9 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSide
                                 </button> */}
 
                                 {/* menu sidbar */}
-                                <div className="menu-sidebar" onClick={handleSidebar}>
+                                {/* <div className="menu-sidebar" onClick={handleSidebar}>
                                     <button><img src="/assets/images/icons/toggler.svg" alt="Toggler" /></button>
-                                </div>
+                                </div> */}
                                 <Link href="/contact" className="theme-btn" >Contactez</Link>
                             </div>
                         </div>
