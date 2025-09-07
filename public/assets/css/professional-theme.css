@@ -1,0 +1,666 @@
+/* Professional Theme Enhancements */
+
+/* Ensure All Sections Have White Backgrounds */
+section, .section, .about-section, .service-section, .team-section, .blog-section, .contact-section, .footer-section {
+    background: #FFFFFF !important;
+}
+
+/* Override any dark backgrounds */
+[class*="bg-dark"], [class*="bg-black"], [class*="bg-primary"] {
+    background: #FFFFFF !important;
+}
+
+/* Ensure all content areas are white */
+.content-area, .main-content, .page-content {
+    background: #FFFFFF !important;
+}
+
+/* LetsTalk Component Visibility Fix */
+.lets-talk-area {
+    background: #FFFFFF !important;
+    position: relative;
+    z-index: 1;
+}
+
+.lets-talk-text {
+    color: var(--heading-color) !important;
+    font-size: 100px;
+    font-weight: 700;
+    display: inline-block;
+    text-transform: capitalize;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: all 0.3s ease;
+}
+
+.lets-talk-text:hover {
+    color: var(--primary-color) !important;
+    transform: scale(1.05);
+}
+
+/* Ensure wow animations work properly */
+.wow {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.wow.zoomIn {
+    animation: zoomIn 1s ease-out;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Partner Logos Marquee Styling */
+.client-two-area .headline-wrap .marquee-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 60px;
+    padding: 20px 0;
+}
+
+.client-two-area .headline-wrap .marquee-item img {
+    max-width: 150px;
+    height: auto;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.client-two-area .headline-wrap .marquee-item:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.client-two-area .headline-wrap .marquee-inner {
+    display: flex;
+    align-items: center;
+    animation: marquee_left 30s linear infinite;
+    white-space: nowrap;
+}
+
+.client-two-area .headline-wrap .marquee-wrap {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    background: #FFFFFF;
+    padding: 20px 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Enhanced Marquee Styles for Horizontal Slider */
+.headline-wrap.style-three {
+    position: relative;
+    overflow: hidden;
+    background: #FFFFFF;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.headline-wrap.style-three .marquee-wrap {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    background: #FFFFFF;
+    padding: 15px 0;
+}
+
+.headline-wrap.style-three .marquee-inner {
+    display: flex;
+    align-items: center;
+    animation: marquee_left 20s linear infinite;
+    white-space: nowrap;
+}
+
+.headline-wrap.style-three .marquee-item {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+    white-space: nowrap;
+    color: var(--heading-color);
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.headline-wrap.style-three .marquee-item b {
+    color: var(--heading-color);
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.headline-wrap.style-three .marquee-item i {
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+/* Ensure marquee animation works */
+@keyframes marquee_left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+@-webkit-keyframes marquee_left {
+    0% { -webkit-transform: translateX(0); }
+    100% { -webkit-transform: translateX(-100%); }
+}
+
+/* Enhanced Card Styles */
+.card, .service-item, .team-item, .blog-item {
+    /* background: #FFFFFF; */
+    /* border: 1px solid var(--border-color); */
+    /* border-radius: 12px; */
+    /* box-shadow: 0 2px 20px rgba(24, 61, 88, 0.08); */
+    transition: all 0.3s ease;
+}
+
+/* .card:hover, .service-item:hover, .team-item:hover, .blog-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(24, 61, 88, 0.15);
+    border-color: var(--primary-color);
+} */
+
+/* Enhanced Section Styling */
+.section-padding {
+    background: #FFFFFF;
+}
+
+.section-title h2 {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Professional Navigation Enhancements */
+.main-menu .navbar-collapse > ul > li > a {
+    color: var(--heading-color);
+    font-weight: 600;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.main-menu .navbar-collapse > ul > li > a:before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.main-menu .navbar-collapse > ul > li > a:hover:before {
+    width: 100%;
+}
+
+/* Enhanced Button Variations */
+.btn-outline-primary {
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    color: #FFFFFF;
+    background: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(48, 121, 38, 0.3);
+}
+
+.btn-secondary {
+    background: var(--secondary-color);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(24, 61, 88, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #0f2a3a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(24, 61, 88, 0.3);
+}
+
+/* Professional Form Enhancements */
+.form-control {
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    transition: all 0.3s ease;
+    background: #FFFFFF;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(48, 121, 38, 0.1);
+    background: #FFFFFF;
+}
+
+/* Enhanced Testimonial Cards */
+.testimonial-item {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 25px rgba(24, 61, 88, 0.1);
+    border-left: 4px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.testimonial-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 35px rgba(24, 61, 88, 0.15);
+}
+
+/* Professional Progress Bars */
+.progress {
+    height: 8px;
+    border-radius: 4px;
+    background: var(--background-light);
+    overflow: hidden;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    border-radius: 4px;
+}
+
+/* Enhanced Pricing Cards */
+.pricing-item {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 40px 30px;
+    box-shadow: 0 4px 25px rgba(24, 61, 88, 0.1);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
+.pricing-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 35px rgba(24, 61, 88, 0.15);
+    border-color: var(--primary-color);
+}
+
+/* Professional Footer Enhancements */
+.footer-one {
+    background: #FFFFFF;
+    color: var(--base-color);
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-one h5, .footer-one h6 {
+    color: var(--heading-color);
+}
+
+.footer-one .widget-links ul li a {
+    color: var(--base-color);
+    transition: all 0.3s ease;
+}
+
+.footer-one .widget-links ul li a:hover {
+    color: var(--primary-color);
+    padding-left: 5px;
+}
+
+/* Enhanced Social Media Icons */
+.social-style-one a {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: #FFFFFF;
+    display: inline-block;
+    text-align: center;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(48, 121, 38, 0.2);
+}
+
+.social-style-one a:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(24, 61, 88, 0.3);
+}
+
+/* Professional Timeline */
+.timeline-item {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(24, 61, 88, 0.1);
+    border-left: 4px solid var(--primary-color);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 25px rgba(24, 61, 88, 0.15);
+}
+
+/* Enhanced Call-to-Action Sections */
+.cta-section {
+    background: #FFFFFF;
+    color: var(--base-color);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.cta-section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="10" cy="60" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="40" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+}
+
+/* Professional Stats Counter */
+.counter-item {
+    text-align: center;
+    padding: 30px 20px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(24, 61, 88, 0.1);
+    transition: all 0.3s ease;
+}
+
+.counter-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(24, 61, 88, 0.15);
+}
+
+.counter-item .count {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.counter-item h5 {
+    color: var(--heading-color);
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+/* Enhanced Blog Cards */
+.blog-item {
+    background: #FFFFFF;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 25px rgba(24, 61, 88, 0.1);
+    transition: all 0.3s ease;
+}
+
+.blog-item .image {
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-item .image img {
+    transition: transform 0.3s ease;
+}
+
+.blog-item:hover .image img {
+    transform: scale(1.05);
+}
+
+.blog-item .content {
+    padding: 25px;
+}
+
+.blog-item .content .date {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.blog-item .content h4 {
+    color: var(--heading-color);
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.blog-item:hover .content h4 {
+    color: var(--primary-color);
+}
+
+/* Professional Team Cards */
+.team-item {
+    background: #FFFFFF;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 25px rgba(24, 61, 88, 0.1);
+    transition: all 0.3s ease;
+}
+
+.team-item .image {
+    position: relative;
+    overflow: hidden;
+}
+
+.team-item .image img {
+    transition: transform 0.3s ease;
+}
+
+.team-item:hover .image img {
+    transform: scale(1.05);
+}
+
+.team-item .content {
+    padding: 25px;
+    text-align: center;
+}
+
+.team-item .content h4 {
+    color: var(--heading-color);
+    margin-bottom: 5px;
+}
+
+.team-item .content .designation {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Enhanced Portfolio Grid */
+.portfolio-item {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(24, 61, 88, 0.1);
+    transition: all 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(24, 61, 88, 0.15);
+}
+
+.portfolio-item .overlay {
+    background: linear-gradient(135deg, rgba(48, 121, 38, 0.9) 0%, rgba(24, 61, 88, 0.9) 100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Professional Contact Form */
+.contact-form {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 25px rgba(24, 61, 88, 0.1);
+}
+
+.contact-form .form-group {
+    margin-bottom: 25px;
+}
+
+.contact-form .form-control {
+    height: 55px;
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    padding: 0 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(48, 121, 38, 0.1);
+}
+
+.contact-form textarea.form-control {
+    height: 120px;
+    padding: 15px 20px;
+    resize: vertical;
+}
+
+/* Enhanced Loading Animation */
+@keyframes professionalPulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.loading-animation {
+    animation: professionalPulse 2s infinite;
+}
+
+/* Professional Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 768px) {
+    .card, .service-item, .team-item, .blog-item {
+        margin-bottom: 30px;
+    }
+    
+    .cta-section {
+        padding: 60px 0;
+    }
+    
+    .counter-item .count {
+        font-size: 36px;
+    }
+    
+    .contact-form {
+        padding: 30px 20px;
+    }
+    
+    .headline-wrap.style-three .marquee-item {
+        font-size: 14px;
+        margin-right: 20px;
+    }
+    
+    .client-two-area .headline-wrap .marquee-item {
+        margin-right: 30px;
+    }
+    
+    .client-two-area .headline-wrap .marquee-item img {
+        max-width: 120px;
+    }
+    
+    .lets-talk-text {
+        font-size: 70px;
+    }
+}
+
+/* Professional Typography Enhancements */
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.text-secondary {
+    color: var(--secondary-color) !important;
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+/* Enhanced Focus States */
+*:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Professional Selection */
+::selection {
+    background: var(--primary-color);
+    color: #FFFFFF;
+}
+
+::-moz-selection {
+    background: var(--primary-color);
+    color: #FFFFFF;
+}
