@@ -40,7 +40,6 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSide
                             </div>
                             {/* Menu Button */}
                             <div className="menu-btns ms-lg-auto ">
-                                
                                 <Link href="/contact" className="theme-btn" >Contactez</Link>
                             </div>
                         </div>
