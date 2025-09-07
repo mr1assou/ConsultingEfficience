@@ -79,7 +79,7 @@ export default function Home() {
                         <div className="row align-items-end justify-content-between">
                             <div className="col-lg-8 wow fadeInLeft delay-0-2s">
                                 <div className="about-hero-content pt-50 rpt-95 pb-95">
-                                    <h1>Nous sommes créative et professionnelle</h1>
+                                    <h1>No sommes créative et professionnelle</h1>
                                     <p>Nous travaillons en étroite collaboration avec nos clients tout au long du processus de conseil, depuis l'analyse initiale jusqu'à la mise en œuvre finale, afin de garantir que nous répondons à leurs attentes et dépassons leurs objectifs.</p>
                                     {/* <Link href="/contact" className="theme-btn style-two">Contactez-Nous</Link> */}
                                     <VideoPopup style={1}/>
