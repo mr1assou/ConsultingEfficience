@@ -13,12 +13,13 @@ export default function Portfolio() {
                 <div>
                     <section id="about" className="about-area bgc-black py-145 rpy-100 rel z-1">
                         <div className="container">
-                            <div className="row justify-content-between align-items-center g-5">
-                                <div className="col-lg-7">
+                            <div className="row justify-content-between align-items-stretch g-5" style={{ minHeight: '400px' }}>
+                                <div className="col-lg-6">
                                     <div className="about-image-wrapper wow fadeInLeft delay-0-2s" style={{
                                         borderRadius: '15px',
                                         overflow: 'hidden',
-                                        boxShadow: '0 15px 35px rgba(0,0,0,0.1)'
+                                        boxShadow: '0 15px 35px rgba(0,0,0,0.1)',
+                                        height: '100%'
                                     }}>
                                         <Image 
                                             src="/assets/images/hero/eng.png" 
@@ -28,27 +29,29 @@ export default function Portfolio() {
                                             priority
                                             style={{
                                                 width: '100%',
-                                                height: 'auto',
-                                                maxWidth: '100%',
+                                                height: '100%',
+                                                objectFit: 'cover',
                                                 display: 'block'
                                             }}
                                         />
                                     </div>
                                 </div>
-                                <div className="col-lg-4">
-                                    <div className="about-content wow fadeInRight delay-0-2s">
-                                        <div className="section-title mb-30">
-                                            <span className="sub-title mb-15" style={{
+                                <div className="col-lg-5">
+                                    <div className="about-content wow fadeInRight delay-0-2s" style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                                        <div className="section-title mb-30" style={{ flex: 1 }}>
+                                            <h2 style={{
                                                 display: 'block',
-                                                fontSize: '18px',
-                                                fontWeight: '600',
+                                                fontSize: 'clamp(24px, 4vw, 32px)',
+                                                fontWeight: '900',
                                                 color: '#307926',
                                                 textTransform: 'uppercase',
-                                                letterSpacing: '1px',
-                                                marginBottom: '20px'
+                                                letterSpacing: '2px',
+                                                marginBottom: '25px',
+                                                textShadow: '2px 2px 4px rgba(0,0,0,0.1)',
+                                                lineHeight: '1.2'
                                             }}>
                                                 Notre approche de formation responsable
-                                            </span>
+                                            </h2>
                                             <h5 style={{
                                                 fontSize: 'clamp(16px, 2.5vw, 18px)',
                                                 lineHeight: '1.8',
@@ -100,21 +103,23 @@ export default function Portfolio() {
                     
                     <section id="about" className="about-area bgc-black py-145 rpy-100 rel z-1">
                         <div className="container">
-                            <div className="row justify-content-between align-items-center">
-                                <div className="col-lg-4">
-                                    <div className="about-content wow fadeInRight delay-0-2s">
-                                        <div className="section-title mb-30">
-                                            <span className="sub-title mb-15" style={{
+                            <div className="row justify-content-between align-items-stretch" style={{ minHeight: '400px' }}>
+                                <div className="col-lg-5">
+                                    <div className="about-content wow fadeInRight delay-0-2s" style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                                        <div className="section-title mb-30" style={{ flex: 1 }}>
+                                            <h2 style={{
                                                 display: 'block',
-                                                fontSize: '18px',
-                                                fontWeight: '600',
+                                                fontSize: 'clamp(24px, 4vw, 32px)',
+                                                fontWeight: '900',
                                                 color: '#307926',
                                                 textTransform: 'uppercase',
-                                                letterSpacing: '1px',
-                                                marginBottom: '20px'
+                                                letterSpacing: '2px',
+                                                marginBottom: '25px',
+                                                textShadow: '2px 2px 4px rgba(0,0,0,0.1)',
+                                                lineHeight: '1.2'
                                             }}>
                                                 Un cadre confidentiel et sécurisé
-                                            </span>
+                                            </h2>
                                             <h5 style={{
                                                 fontSize: 'clamp(16px, 2.5vw, 18px)',
                                                 lineHeight: '1.8',
@@ -217,11 +222,12 @@ export default function Portfolio() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-7">
+                                <div className="col-lg-6">
                                     <div className="about-image-wrapper wow fadeInLeft delay-0-2s" style={{
                                         borderRadius: '15px',
                                         overflow: 'hidden',
-                                        boxShadow: '0 15px 35px rgba(0,0,0,0.1)'
+                                        boxShadow: '0 15px 35px rgba(0,0,0,0.1)',
+                                        height: '100%'
                                     }}>
                                         <Image 
                                             width={700} 
@@ -231,8 +237,8 @@ export default function Portfolio() {
                                             alt="Confidentialité et sécurité" 
                                             style={{
                                                 width: '100%',
-                                                height: 'auto',
-                                                maxWidth: '100%',
+                                                height: '100%',
+                                                objectFit: 'cover',
                                                 display: 'block'
                                             }}
                                         />
@@ -244,12 +250,13 @@ export default function Portfolio() {
                     
                     <section id="about" className="about-area bgc-black py-40 rpy-100 rel z-1">
                         <div className="container">
-                            <div className="row justify-content-between align-items-center g-5">
-                                <div className="col-lg-7">
+                            <div className="row justify-content-between align-items-stretch g-5" style={{ minHeight: '400px' }}>
+                                <div className="col-lg-6">
                                     <div className="about-image-wrapper wow fadeInLeft delay-0-2s" style={{
                                         borderRadius: '15px',
                                         overflow: 'hidden',
-                                        boxShadow: '0 15px 35px rgba(0,0,0,0.1)'
+                                        boxShadow: '0 15px 35px rgba(0,0,0,0.1)',
+                                        height: '100%'
                                     }}>
                                         <Image 
                                             width={700} 
@@ -259,27 +266,29 @@ export default function Portfolio() {
                                             alt="Accessibilité et handicap" 
                                             style={{
                                                 width: '100%',
-                                                height: 'auto',
-                                                maxWidth: '100%',
+                                                height: '100%',
+                                                objectFit: 'cover',
                                                 display: 'block'
                                             }}
                                         />
                                     </div>
                                 </div>
-                                <div className="col-lg-4">
-                                    <div className="about-content wow fadeInRight delay-0-2s">
-                                        <div className="section-title mb-30">
-                                            <span className="sub-title mb-15" style={{
+                                <div className="col-lg-5">
+                                    <div className="about-content wow fadeInRight delay-0-2s" style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                                        <div className="section-title mb-30" style={{ flex: 1 }}>
+                                            <h2 style={{
                                                 display: 'block',
-                                                fontSize: '18px',
-                                                fontWeight: '600',
+                                                fontSize: 'clamp(24px, 4vw, 32px)',
+                                                fontWeight: '900',
                                                 color: '#307926',
                                                 textTransform: 'uppercase',
-                                                letterSpacing: '1px',
-                                                marginBottom: '20px'
+                                                letterSpacing: '2px',
+                                                marginBottom: '25px',
+                                                textShadow: '2px 2px 4px rgba(0,0,0,0.1)',
+                                                lineHeight: '1.2'
                                             }}>
                                                 Accessibilité & Handicap
-                                            </span>
+                                            </h2>
                                             <h5 style={{
                                                 fontSize: 'clamp(16px, 2.5vw, 18px)',
                                                 lineHeight: '1.8',

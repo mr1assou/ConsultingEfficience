@@ -83,13 +83,6 @@ export default function Home() {
                                     <p>Nous travaillons en étroite collaboration avec nos clients tout au long du processus de conseil, depuis l'analyse initiale jusqu'à la mise en œuvre finale, afin de garantir que nous répondons à leurs attentes et dépassons leurs objectifs.</p>
                                     {/* <Link href="/contact" className="theme-btn style-two">Contactez-Nous</Link> */}
                                     <VideoPopup style={1}/>
-                                    <div className="row justify-content-center">
-                                        <div className="col-lg-6">
-                                            {/* <div className="hero-scroll-down mt-60 wow fadeInDown delay-0-6s">
-                                                    <Link href="#about"><i className="far fa-arrow-down" /></Link>
-                                                </div> */}
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                             <div className="col-lg-4 wow fadeInRight delay-0-2s">
@@ -113,43 +106,7 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    {/* <div className="headline-wrap style-three color-black">
-                        <span className="marquee-wrap bg-white py-15">
-                            <span className="marquee-inner left">
-                                <span className="marquee-item"><b>Prospection & Vente</b><i className="fas fa-bahai" /></span>
-                                <span className="marquee-item"><b>Négociation</b><i className="fas fa-bahai" /></span>
-                                <span className="marquee-item"><b>Management</b><i className="fas fa-bahai" /></span>
-                                <span className="marquee-item"><b>Communication & Influence</b><i className="fas fa-bahai" /></span>
-                                <span className="marquee-item"><b>Développement personnel</b><i className="fas fa-bahai" /></span>
-                                <span className="marquee-item"><b>Leadership</b><i className="fas fa-bahai" /></span>
-                                <span className="marquee-item"><b>Posture professionnelle</b><i className="fas fa-bahai" /></span>
-                                <span className="marquee-item"><b>Croissance personnelle</b><i className="fas fa-bahai" /></span>
-                                <span className="marquee-item"><b>Mieux-être durable</b><i className="fas fa-bahai" /></span>
-                            </span>
-                            <span className="marquee-inner left">
-                                <span className="marquee-item"><b>Prospection & Vente</b><i className="fas fa-bahai" /></span>
-                                <span className="marquee-item"><b>Négociation</b><i className="fas fa-bahai" /></span>
-                                <span className="marquee-item"><b>Management</b><i className="fas fa-bahai" /></span>
-                                <span className="marquee-item"><b>Communication & Influence</b><i className="fas fa-bahai" /></span>
-                                <span className="marquee-item"><b>Développement personnel</b><i className="fas fa-bahai" /></span>
-                                <span className="marquee-item"><b>Leadership</b><i className="fas fa-bahai" /></span>
-                                <span className="marquee-item"><b>Posture professionnelle</b><i className="fas fa-bahai" /></span>
-                                <span className="marquee-item"><b>Croissance personnelle</b><i className="fas fa-bahai" /></span>
-                                <span className="marquee-item"><b>Mieux-être durable</b><i className="fas fa-bahai" /></span>
-                            </span>
-                            <span className="marquee-inner left">
-                                <span className="marquee-item"><b>Prospection & Vente</b><i className="fas fa-bahai" /></span>
-                                <span className="marquee-item"><b>Négociation</b><i className="fas fa-bahai" /></span>
-                                <span className="marquee-item"><b>Management</b><i className="fas fa-bahai" /></span>
-                                <span className="marquee-item"><b>Communication & Influence</b><i className="fas fa-bahai" /></span>
-                                <span className="marquee-item"><b>Développement personnel</b><i className="fas fa-bahai" /></span>
-                                <span className="marquee-item"><b>Leadership</b><i className="fas fa-bahai" /></span>
-                                <span className="marquee-item"><b>Posture professionnelle</b><i className="fas fa-bahai" /></span>
-                                <span className="marquee-item"><b>Croissance personnelle</b><i className="fas fa-bahai" /></span>
-                                <span className="marquee-item"><b>Mieux-être durable</b><i className="fas fa-bahai" /></span>
-                            </span>
-                        </span>
-                    </div> */}
+              
                 </section>
 
                 {/* Second Horizontal Autoplay Slider */}
@@ -195,18 +152,54 @@ export default function Home() {
 
                 <section id="about" className="about-area bgc-black py-145 rpy-100 rel z-1">
                     <div className="container">
-                        <div className="row justify-content-between">
+                        <div className="row justify-content-between align-items-center">
                             <div className="col-lg-4 col-md-6 col-sm-12">
-                                <div className="our-experience-years rmb-55 wow fadeInLeft delay-0-2s">
-                                    <span className="years">12</span>
-                                    <span className="text" style={{ color: '#ffffff', textShadow: '3px 3px 6px rgba(0,0,0,0.8), 0 0 20px rgba(255,255,255,0.3)', fontWeight: 'bold', fontSize: '58px', letterSpacing: '2px' }}>années d'expérience</span>
+                                <div className="our-experience-years rmb-55 wow fadeInLeft delay-0-2s" style={{ 
+                                    textAlign: 'center',
+                                    padding: 'clamp(20px, 4vw, 40px) 0'
+                                }}>
+                                    <span className="years" style={{ 
+                                        display: 'block',
+                                        fontSize: 'clamp(120px, 22vw, 280px)',
+                                        fontWeight: '900',
+                                        color: '#307926',
+                                        textShadow: '3px 3px 6px rgba(0,0,0,0.8), 0 0 20px rgba(45,80,22,0.3)',
+                                        lineHeight: '0.8',
+                                        marginBottom: 'clamp(5px, 2vw, 15px)'
+                                    }}>12</span>
+                                    <span className="text" style={{ 
+                                        color: '#ffffff', 
+                                        textShadow: '3px 3px 6px rgba(0,0,0,0.8), 0 0 20px rgba(255,255,255,0.3)', 
+                                        fontWeight: 'bold', 
+                                        fontSize: 'clamp(18px, 4vw, 32px)', 
+                                        letterSpacing: 'clamp(1px, 0.5vw, 2px)',
+                                        display: 'block',
+                                        lineHeight: '1.2',
+                                        textTransform: 'uppercase',
+                                    }}>années d'expérience</span>
                                 </div>
                             </div>
                             <div className="col-lg-7 col-md-6 col-sm-12">
-                                <div className="about-content wow fadeInRight delay-0-2s">
+                                <div className="about-content wow fadeInRight delay-0-2s" style={{ 
+                                    paddingLeft: 'clamp(0px, 3vw, 30px)'
+                                }}>
                                     <div className="section-title mb-30">
-                                        <span className="sub-title mb-15">Notre objectif</span>
-                                        <h2>aider chacun à révéler son potentiel, à améliorer sa confiance en soi et à acquérir les outils nécessaires pour relever les défis actuels et futurs.<i className="fas fa-asterisk" /></h2>
+                                        <span className="sub-title mb-15" style={{
+                                            fontSize: 'clamp(14px, 2.5vw, 18px)',
+                                            fontWeight: '600',
+                                            color: '#307926',
+                                            textTransform: 'uppercase',
+                                            letterSpacing: '1px',
+                                            display: 'block',
+                                            marginBottom: 'clamp(10px, 2vw, 20px)'
+                                        }}>Notre objectif</span>
+                                        <h2 style={{
+                                            fontSize: 'clamp(20px, 4vw, 36px)',
+                                            fontWeight: '700',
+                                            color: '#ffffff',
+                                            lineHeight: '1.3',
+                                            marginBottom: '0'
+                                        }}>aider chacun à révéler son potentiel, à améliorer sa confiance en soi et à acquérir les outils nécessaires pour relever les défis actuels et futurs.<i className="fas fa-asterisk" style={{ color: '#307926', marginLeft: '8px' }} /></h2>
                                     </div>
                                 </div>
                             </div>
@@ -271,16 +264,29 @@ export default function Home() {
 
                 <section id="about" className="about-area bgc-black py-145 rpy-100 rel z-1">
                     <div className="container">
-                        <div className="row justify-content-between align-items-center g-5">
+                        <div className="row justify-content-between align-items-stretch g-5" style={{ minHeight: '600px' }}>
                             <div className="col-lg-6">
-                                <div className="about-images wow fadeInLeft delay-0-2s">
-                                    <div className="row g-4">
+                                <div className="about-images wow fadeInLeft delay-0-2s" style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                                    <div className="row g-4" style={{ flex: 1 }}>
+                                        <div className="col-12">
+                                            <h3 style={{
+                                                fontSize: 'clamp(32px, 4vw, 42px)',
+                                                fontWeight: '800',
+                                                color: '#183D58',
+                                                marginBottom: '20px',
+                                                lineHeight: '1.2',
+                                                textShadow: '2px 2px 4px rgba(0,0,0,0.1)'
+                                            }}>
+                                                Un organisme de formation qui conjugue <span style={{ color: '#307926' }}>excellence commerciale</span> et <span style={{ color: '#307926' }}>développement de soi</span>
+                                            </h3>
+                                        </div>
                                         <div className="col-12">
                                             <div className="about-image-wrapper" style={{
                                                 borderRadius: '15px',
                                                 overflow: 'hidden',
                                                 boxShadow: '0 15px 35px rgba(0,0,0,0.1)',
-                                                marginBottom: '20px'
+                                                marginTop: '10px',
+                                                flex: 1
                                             }}>
                                                 <Image 
                                                     src="/assets/images/hero/eng4.png" 
@@ -297,14 +303,74 @@ export default function Home() {
                                                 />
                                             </div>
                                         </div>
-                                        <div className="col-12">
-                                            <div className="qualiopi-certification" style={{
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-6">
+                                <div className="about-content wow fadeInRight delay-0-2s" style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                                    <div className="section-title mb-30" style={{ flex: 1 }}>
+                                        <span className="sub-title mb-15" style={{
+                                            display: 'block',
+                                            fontSize: '18px',
+                                            fontWeight: '600',
+                                            color: '#307926',
+                                            textTransform: 'uppercase',
+                                            letterSpacing: '1px',
+                                            marginBottom: '20px'
+                                        }}>
+                                            Excellence & Certification
+                                        </span>
+                                        <div style={{
+                                            padding: '25px',
+                                            backgroundColor: '#f8f9fa',
+                                            borderRadius: '15px',
+                                            borderLeft: '4px solid #307926',
+                                            marginBottom: '30px'
+                                        }}>
+                                            <p style={{
+                                                fontSize: 'clamp(18px, 3vw, 20px)',
+                                                lineHeight: '1.6',
+                                                color: '#183D58',
+                                                fontWeight: '700',
+                                                margin: 0,
+                                                textAlign: 'center',
+                                                fontStyle: 'italic'
+                                            }}>
+                                                Choisir nos services certifiés, c'est opter pour une expérience d'apprentissage à la fois enrichissante et fiable <i className="fas fa-asterisk" style={{ color: '#307926', marginLeft: '8px' }} />
+                                            </p>
+                                        </div>
+
+                                        <div style={{ marginBottom: '25px' }}>
+                                            <p style={{
+                                                fontSize: 'clamp(16px, 2.5vw, 18px)',
+                                                lineHeight: '1.8',
+                                                color: '#183D58',
+                                                fontWeight: '500',
+                                                marginBottom: '20px'
+                                            }}>
+                                                La <strong>certification Qualiopi</strong> est un gage de qualité pour nos clients.
+                                            </p>
+                                        </div>
+
+                                        <div style={{ marginBottom: '25px' }}>
+                                            <p style={{
+                                                fontSize: 'clamp(16px, 2.5vw, 18px)',
+                                                lineHeight: '1.8',
+                                                color: '#183D58',
+                                                fontWeight: '500',
+                                                marginBottom: '20px'
+                                            }}>
+                                                Elle atteste de notre engagement à fournir des formations <strong>efficaces et conformes</strong> aux exigences des financeurs.
+                                            </p>
+                                        </div>
+
+                                        <div className="qualiopi-certification" style={{
                                                 textAlign: 'center',
                                                 padding: '20px',
                                                 backgroundColor: '#f8f9fa',
                                                 borderRadius: '12px',
                                                 border: '2px solid #e9ecef',
-                                                marginTop: '10px'
+                                            marginTop: '30px'
                                             }}>
                                                 <h6 style={{
                                                     fontSize: '16px',
@@ -335,78 +401,6 @@ export default function Home() {
                                                         }}
                                                     />
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-6">
-                                <div className="about-content wow fadeInRight delay-0-2s">
-                                    <div className="section-title mb-30">
-                                        <span className="sub-title mb-15" style={{
-                                            display: 'block',
-                                            fontSize: '18px',
-                                            fontWeight: '600',
-                                            color: '#307926',
-                                            textTransform: 'uppercase',
-                                            letterSpacing: '1px',
-                                            marginBottom: '20px'
-                                        }}>
-                                            Excellence & Certification
-                                        </span>
-                                        <h3 style={{
-                                            fontSize: 'clamp(32px, 4vw, 42px)',
-                                            fontWeight: '800',
-                                            color: '#183D58',
-                                            marginBottom: '30px',
-                                            lineHeight: '1.2',
-                                            textShadow: '2px 2px 4px rgba(0,0,0,0.1)'
-                                        }}>
-                                            Un organisme de formation qui conjugue <span style={{ color: '#307926' }}>excellence commerciale</span> et <span style={{ color: '#307926' }}>développement de soi</span>
-                                        </h3>
-                                        
-                                        <div style={{ marginBottom: '25px' }}>
-                                            <p style={{
-                                                fontSize: 'clamp(16px, 2.5vw, 18px)',
-                                                lineHeight: '1.8',
-                                                color: '#183D58',
-                                                fontWeight: '500',
-                                                marginBottom: '20px'
-                                            }}>
-                                                La <strong>certification Qualiopi</strong> est un gage de qualité pour nos clients.
-                                            </p>
-                                        </div>
-
-                                        <div style={{ marginBottom: '25px' }}>
-                                            <p style={{
-                                                fontSize: 'clamp(16px, 2.5vw, 18px)',
-                                                lineHeight: '1.8',
-                                                color: '#183D58',
-                                                fontWeight: '500',
-                                                marginBottom: '20px'
-                                            }}>
-                                                Elle atteste de notre engagement à fournir des formations <strong>efficaces et conformes</strong> aux exigences des financeurs.
-                                            </p>
-                                        </div>
-
-                                        <div style={{
-                                            padding: '25px',
-                                            backgroundColor: '#f8f9fa',
-                                            borderRadius: '15px',
-                                            borderLeft: '4px solid #307926',
-                                            marginTop: '30px'
-                                        }}>
-                                            <p style={{
-                                                fontSize: 'clamp(18px, 3vw, 20px)',
-                                                lineHeight: '1.6',
-                                                color: '#183D58',
-                                                fontWeight: '700',
-                                                margin: 0,
-                                                textAlign: 'center',
-                                                fontStyle: 'italic'
-                                            }}>
-                                                Choisir nos services certifiés, c'est opter pour une expérience d'apprentissage à la fois enrichissante et fiable <i className="fas fa-asterisk" style={{ color: '#307926', marginLeft: '8px' }} />
-                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -432,24 +426,6 @@ export default function Home() {
                     pointer-events: none;
                   }
                 `}</style>
-
-            {/* Bottom background pattern */}
-            {/* <div className="bottom-ribbon-bg" aria-hidden>
-                <svg
-                    width="100%" height="100%"
-                    viewBox="0 0 1920 300"
-                    preserveAspectRatio="xMidYMid slice"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-             
-                    <polygon points="0,300 0,100 960,300" fill="var(--secondary-color)" />
-
-                 
-                    <polygon points="1920,300 1920,100 960,300" fill="var(--secondary-color)" />
-
-                    <polygon points="480,300 960,100 1440,300" fill="var(--primary-color)" />
-                </svg>
-            </div> */}
         </FirstVisitPreloader>
     )
 }

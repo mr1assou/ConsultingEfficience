@@ -169,24 +169,28 @@ export default function AboutTwo4() {
                     >
                       NOTRE ACCOMPAGNEMENT
                     </h2>
-                    <div className="services-list">
-                      <div className="service-item" style={{ padding: "clamp(12px, 2.5vw, 15px) 0" }}>
+                    <div className="benefits-list">
+                      <div
+                        className="benefit-item"
+                        style={{ padding: "clamp(12px, 2.5vw, 15px) 0", borderBottom: "1px solid #e9ecef" }}
+                      >
                         <h6
                           style={{
                             fontSize: "clamp(14px, 2.5vw, 16px)",
                             fontWeight: "700",
                             color: "#307926",
-                            margin: "0 0 5px 0",
+                            margin: "0 0 8px 0",
                             textTransform: "uppercase",
                           }}
                         >
-                          Diagnostic gratuit
+                          Diagnostic gratuit :
                         </h6>
                         <p
                           style={{
                             fontSize: "clamp(13px, 2.2vw, 14px)",
                             color: "#183D58",
                             margin: 0,
+                            lineHeight: "1.5",
                           }}
                         >
                           Étude de vos besoins et de vos enjeux
@@ -194,7 +198,7 @@ export default function AboutTwo4() {
                       </div>
 
                       <div
-                        className="service-item"
+                        className="benefit-item"
                         style={{ padding: "clamp(12px, 2.5vw, 15px) 0", borderBottom: "1px solid #e9ecef" }}
                       >
                         <h6
@@ -202,17 +206,18 @@ export default function AboutTwo4() {
                             fontSize: "clamp(14px, 2.5vw, 16px)",
                             fontWeight: "700",
                             color: "#307926",
-                            margin: "0 0 5px 0",
+                            margin: "0 0 8px 0",
                             textTransform: "uppercase",
                           }}
                         >
-                          Recherche de financements
+                          Recherche de financements :
                         </h6>
                         <p
                           style={{
                             fontSize: "clamp(13px, 2.2vw, 14px)",
                             color: "#183D58",
                             margin: 0,
+                            lineHeight: "1.5",
                           }}
                         >
                           Mobilisation des dispositifs (FAF/OPCO)
@@ -220,7 +225,7 @@ export default function AboutTwo4() {
                       </div>
 
                       <div
-                        className="service-item"
+                        className="benefit-item"
                         style={{ padding: "clamp(12px, 2.5vw, 15px) 0", borderBottom: "1px solid #e9ecef" }}
                       >
                         <h6
@@ -228,40 +233,42 @@ export default function AboutTwo4() {
                             fontSize: "clamp(14px, 2.5vw, 16px)",
                             fontWeight: "700",
                             color: "#307926",
-                            margin: "0 0 5px 0",
+                            margin: "0 0 8px 0",
                             textTransform: "uppercase",
                           }}
                         >
-                          Montage de dossier
+                          Montage de dossier :
                         </h6>
                         <p
                           style={{
                             fontSize: "clamp(13px, 2.2vw, 14px)",
                             color: "#183D58",
                             margin: 0,
+                            lineHeight: "1.5",
                           }}
                         >
                           Gestion des démarches administratives
                         </p>
                       </div>
 
-                      <div className="service-item" style={{ padding: "clamp(12px, 2.5vw, 15px) 0" }}>
+                      <div className="benefit-item" style={{ padding: "clamp(12px, 2.5vw, 15px) 0" }}>
                         <h6
                           style={{
                             fontSize: "clamp(14px, 2.5vw, 16px)",
                             fontWeight: "700",
                             color: "#307926",
-                            margin: "0 0 5px 0",
+                            margin: "0 0 8px 0",
                             textTransform: "uppercase",
                           }}
                         >
-                          Suivi et reporting
+                          Suivi et reporting :
                         </h6>
                         <p
                           style={{
                             fontSize: "clamp(13px, 2.2vw, 14px)",
                             color: "#183D58",
                             margin: 0,
+                            lineHeight: "1.5",
                           }}
                         >
                           Un interlocuteur unique pour votre dossier
@@ -410,7 +417,7 @@ export default function AboutTwo4() {
       <style jsx>{`
         .section-stack {
           display: grid;
-          gap: clamp(30px, 6vw, 40px); /* This is the margin between sections */
+          gap: clamp(50px, 8vw, 70px); /* Increased margin between sections */
         }
       `}</style>
     </>

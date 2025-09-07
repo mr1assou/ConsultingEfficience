@@ -9,22 +9,32 @@ export default function About1() {
                 position: 'relative'
             }}>
                 <div className="container">
-                    <div className="row align-items-start g-8">
+                    <div className="row align-items-start g-20">
                         {/* Text */}
                         <div className="col-lg-6">
-                            <div className="about-content hover-box-wrap rmb-55 wow fadeInRight delay-0-2s">
+                            <div className="about-content hover-box-wrap rmb-55 wow fadeInRight delay-0-2s" style={{ paddingRight: '40px' }}>
                                 <div className="section-title">
-                                    <span className="sub-title mb-15" style={{color: '#183D58', fontSize: '18px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '1px'}}>À propos</span>
+                                    <span className="sub-title mb-15" style={{
+                                        display: 'block',
+                                        fontSize: '18px',
+                                        fontWeight: '600',
+                                        color: '#307926',
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '1px',
+                                        marginBottom: '20px'
+                                    }}>
+                                        À propos
+                                    </span>
+                                  
                                     <h3 style={{
                                         fontSize: 'clamp(32px, 4vw, 42px)',
                                         fontWeight: '800',
                                         color: '#183D58',
                                         marginBottom: '30px',
                                         lineHeight: '1.2',
-                                        textShadow: '2px 2px 4px rgba(0,0,0,0.1)',
-                                        textAlign: 'left'
+                                        textShadow: '2px 2px 4px rgba(0,0,0,0.1)'
                                     }}>
-                                        Révéler les talents. Transformer les ambitions
+                                       Révéler les talents<span style={{ color: '#307926' }}></span> et <span style={{ color: '#307926' }}>Transformer les ambitions</span>
                                     </h3>
 
                                     <div style={{ marginBottom: '25px' }}>
@@ -83,14 +93,14 @@ export default function About1() {
                                         </p>
                                     </div>
                                 </div>
-                               
-            
+
+
                             </div>
                         </div>
 
                         {/* Image */}
                         <div className="col-lg-6">
-                            <div className="wow fadeInLeft delay-0-2s">
+                            <div className="wow fadeInLeft delay-0-2s" style={{ paddingLeft: '40px' }}>
                                 <Image
                                     src="/assets/images/hero/ryad.jpg"
                                     alt="Ryad Mimeche - Efficience Consulting"

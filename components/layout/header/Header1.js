@@ -39,27 +39,8 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSide
                                 {/* Main Menu End*/}
                             </div>
                             {/* Menu Button */}
-                            <div className="menu-btns ms-lg-auto">
-                                {/* <button
-                                    style={{
-                                        color: "#25D366", 
-                                        border: "none",
-                                        width: "20px",          
-                                        height: "20px",
-                                        display: "flex",
-                                        alignItems: "center",
-                                        justifyContent: "center",
-                                        cursor: "pointer",
-                                        boxShadow: "0 4px 8px rgba(0,0,0,0.2)", // subtle shadow
-                                    }}
-                                >
-                                    <FaWhatsapp size={24} />
-                                </button> */}
-
-                                {/* menu sidbar */}
-                                {/* <div className="menu-sidebar" onClick={handleSidebar}>
-                                    <button><img src="/assets/images/icons/toggler.svg" alt="Toggler" /></button>
-                                </div> */}
+                            <div className="menu-btns ms-lg-auto ">
+                                
                                 <Link href="/contact" className="theme-btn" >Contactez</Link>
                             </div>
                         </div>

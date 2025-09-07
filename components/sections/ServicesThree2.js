@@ -206,21 +206,21 @@ export default function ServicesThree2() {
                       alignItems: 'center',
                       justifyContent: 'space-between',
                       padding: '15px 20px',
-                      backgroundColor: '#f8f9fa',
+                      background: 'linear-gradient(90deg, #2c5172, #4a8f3f)',
                       borderRadius: '12px',
-                      border: '1px solid #e9ecef',
+                      border: 'none',
                       transition: 'all 0.3s ease'
                     }}>
                       <span style={{
                         fontSize: '14px',
                         fontWeight: '600',
-                        color: '#183D58'
+                        color: '#ffffff'
                       }}>
                         Découvrir nos formations
                       </span>
                       <i className="fal fa-long-arrow-right" style={{
                         fontSize: '16px',
-                        color: '#307926',
+                        color: '#ffffff',
                         transition: 'transform 0.3s ease'
                       }}></i>
                     </div>
@@ -346,21 +346,21 @@ export default function ServicesThree2() {
                       alignItems: 'center',
                       justifyContent: 'space-between',
                       padding: '15px 20px',
-                      backgroundColor: '#f8f9fa',
+                      background: 'linear-gradient(90deg, #2c5172, #4a8f3f)',
                       borderRadius: '12px',
-                      border: '1px solid #e9ecef',
+                      border: 'none',
                       transition: 'all 0.3s ease'
                     }}>
                       <span style={{
                         fontSize: '14px',
                         fontWeight: '600',
-                        color: '#183D58'
+                        color: '#ffffff'
                       }}>
                         Découvrir notre coaching
                       </span>
                       <i className="fal fa-long-arrow-right" style={{
                         fontSize: '16px',
-                        color: '#183D58',
+                        color: '#ffffff',
                         transition: 'transform 0.3s ease'
                       }}></i>
                     </div>

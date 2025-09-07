@@ -36,10 +36,10 @@ export default function Client2() {
 
 <style jsx global>{`
   .client-two-area .marquee-inner.left {
-    animation-duration: 10s !important;
+    animation-duration: 18s !important;
   }
   .client-two-area .marquee-inner.right {
-    animation-duration: 14s !important;
+    animation-duration: 22s !important;
   }
 `}</style>
 
