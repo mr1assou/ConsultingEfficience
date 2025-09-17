@@ -301,6 +301,281 @@ input[type=radio] {
     min-width: 300px;
 }
 
+/* Laptop spacing - 768px to 1400px (laptop versions) */
+@media only screen and (min-width: 768px) and (max-width: 1400px) {
+    /* Override Bootstrap container for laptop screens */
+    .container {
+        max-width: 1200px !important;
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+    }
+    
+    /* Main content containers - exclude header containers */
+    .container:not(.container-1695) {
+        max-width: 1200px !important;
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+    }
+    
+    /* Ensure main content gets proper spacing */
+    .main .container:not(.container-1695) {
+        max-width: 1200px !important;
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+    }
+    
+    /* Specific content areas with higher specificity */
+    .page-wrapper .container:not(.container-1695) {
+        max-width: 1200px !important;
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+    }
+    
+    /* Target specific sections from the page */
+    .about-page-hero .container:not(.container-1695),
+    .about-area .container:not(.container-1695),
+    .counter-two-area .container:not(.container-1695),
+    .headline-wrap .container:not(.container-1695),
+    .hero-area .container:not(.container-1695),
+    .services-area .container:not(.container-1695),
+    .testimonials-area .container:not(.container-1695),
+    .client-area .container:not(.container-1695),
+    .video-area .container:not(.container-1695),
+    .lets-talk-area .container:not(.container-1695),
+    .footer-area .container:not(.container-1695),
+    /* Additional specific targeting */
+    section .container:not(.container-1695),
+    .bgc-black .container:not(.container-1695),
+    .bg-primary-shape .container:not(.container-1695) {
+        max-width: 1200px !important;
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+    }
+    
+    /* Ensure header stays full-width - override any laptop spacing */
+    .main-header .container,
+    .main-header .container.container-1695 {
+        max-width: 1860px !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    /* Force spacing on all content containers */
+    body .container:not(.container-1695) {
+        max-width: 1200px !important;
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+    }
+    
+    /* Additional override for any remaining containers */
+    .page-wrapper .main .container:not(.container-1695) {
+        max-width: 1200px !important;
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+    }
+    
+    /* Extra specific targeting for main content */
+    .page-wrapper .main section .container,
+    .page-wrapper .main div .container {
+        max-width: 1200px !important;
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+    }
+}
+
+/* Fix text overlay issue in hero section */
+@media only screen and (max-width: 1400px) {
+    .about-page-hero .about-hero-content h1 {
+        font-size: clamp(36px, 6vw, 64px) !important;
+        line-height: 1.2 !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .about-page-hero .about-hero-content p {
+        font-size: clamp(14px, 2vw, 18px) !important;
+        line-height: 1.6 !important;
+        margin-bottom: 25px !important;
+    }
+    
+    .about-page-hero .row {
+        align-items: center !important;
+    }
+    
+    .about-page-hero .col-lg-8 {
+        margin-bottom: 30px !important;
+    }
+    
+    .about-page-hero .col-lg-4 {
+        margin-top: 20px !important;
+    }
+}
+
+/* Additional responsive fixes for smaller screens */
+@media only screen and (max-width: 992px) {
+    .about-page-hero .about-hero-content {
+        text-align: center !important;
+        padding: 30px 0 !important;
+    }
+    
+    .about-page-hero .about-hero-content h1 {
+        font-size: clamp(32px, 7vw, 48px) !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .about-page-hero .about-hero-content p {
+        font-size: clamp(14px, 3vw, 16px) !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .about-page-hero .about-hero-image {
+        margin-top: 20px !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .about-page-hero .about-hero-content h1 {
+        font-size: clamp(28px, 8vw, 36px) !important;
+        line-height: 1.3 !important;
+    }
+    
+    .about-page-hero .about-hero-content p {
+        font-size: clamp(13px, 4vw, 15px) !important;
+        line-height: 1.5 !important;
+    }
+    
+    .about-page-hero .row {
+        flex-direction: column !important;
+    }
+    
+    .about-page-hero .col-lg-8,
+    .about-page-hero .col-lg-4 {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+/* Extra small screens */
+@media only screen and (max-width: 480px) {
+    .about-page-hero .about-hero-content {
+        padding: 20px 0 !important;
+    }
+    
+    .about-page-hero .about-hero-content h1 {
+        font-size: clamp(22px, 9vw, 28px) !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .about-page-hero .about-hero-content p {
+        font-size: clamp(12px, 4.5vw, 14px) !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .about-page-hero .about-hero-image {
+        margin-top: 15px !important;
+    }
+}
+
+/* VideoPopup button responsive sizing */
+@media only screen and (min-width: 768px) and (max-width: 1400px) {
+    .theme-btn.style-two {
+        font-size: 14px !important;
+        padding: 10px 20px !important;
+        min-height: 40px !important;
+    }
+    
+    .theme-btn.style-two .download {
+        font-size: 16px !important;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .theme-btn.style-two {
+        font-size: 13px !important;
+        padding: 8px 16px !important;
+        min-height: 36px !important;
+    }
+    
+    .theme-btn.style-two .download {
+        font-size: 14px !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .theme-btn.style-two {
+        font-size: 12px !important;
+        padding: 6px 14px !important;
+        min-height: 32px !important;
+    }
+    
+    .theme-btn.style-two .download {
+        font-size: 13px !important;
+    }
+}
+
+/* Actualite page - Images and Videos responsive sizing for laptop */
+@media only screen and (min-width: 768px) and (max-width: 1400px) {
+    /* Blog page images */
+    .blog-page-two .image-wrapper {
+        max-width: 600px !important;
+        margin: 0 auto 20px auto !important;
+    }
+    
+    .blog-page-two .image-wrapper img {
+        max-width: 100% !important;
+        height: auto !important;
+        border-radius: 15px !important;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+        transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    }
+    
+    .blog-page-two .image-wrapper:hover img {
+        transform: translateY(-5px) !important;
+        box-shadow: 0 25px 50px rgba(0,0,0,0.2) !important;
+    }
+    
+    /* Blog page videos */
+    .blog-page-two .video-wrapper {
+        max-width: 700px !important;
+        margin: 0 auto !important;
+        border-radius: 15px !important;
+        overflow: hidden !important;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+        transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    }
+    
+    .blog-page-two .video-wrapper:hover {
+        transform: translateY(-5px) !important;
+        box-shadow: 0 25px 50px rgba(0,0,0,0.2) !important;
+    }
+    
+    .blog-page-two .video-wrapper video {
+        width: 100% !important;
+        height: auto !important;
+        border-radius: 15px !important;
+    }
+    
+    /* Blog page regular images */
+    .blog-page-two .image {
+        max-width: 600px !important;
+        margin: 0 auto !important;
+        border-radius: 15px !important;
+        overflow: hidden !important;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+        transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    }
+    
+    .blog-page-two .image:hover {
+        transform: translateY(-5px) !important;
+        box-shadow: 0 25px 50px rgba(0,0,0,0.2) !important;
+    }
+    
+    .blog-page-two .image img {
+        width: 100% !important;
+        height: auto !important;
+        border-radius: 15px !important;
+    }
+}
+
 @media only screen and (min-width: 1200px) {
     .home-two .container {
         max-width: 1330px;
