@@ -576,6 +576,46 @@ input[type=radio] {
     }
 }
 
+/* Engagement page - Images responsive sizing for laptop */
+@media only screen and (min-width: 768px) and (max-width: 1400px) {
+    /* Section 1, 3, 4 images - make bigger and add white background */
+    .about-area .about-image-wrapper {
+        max-width: 800px !important;
+        height: 500px !important;
+        margin: 0 auto !important;
+        background-color: #ffffff !important;
+        padding: 30px !important;
+        border-radius: 30px !important;
+        box-shadow: none !important;
+        transition: transform 0.3s ease !important;
+    }
+    
+    .about-area .about-image-wrapper:hover {
+        transform: translateY(-5px) !important;
+    }
+    
+    .about-area .about-image-wrapper img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important; /* Show full image instead of cropping */
+        border-radius: 25px !important;
+        background-color: #ffffff !important;
+    }
+    
+    /* Ensure proper spacing between image and text */
+    .about-area .row {
+        align-items: center !important;
+    }
+    
+    .about-area .col-lg-6 {
+        margin-bottom: 30px !important;
+    }
+    
+    .about-area .col-lg-5 {
+        margin-bottom: 30px !important;
+    }
+}
+
 @media only screen and (min-width: 1200px) {
     .home-two .container {
         max-width: 1330px;

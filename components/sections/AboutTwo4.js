@@ -136,9 +136,12 @@ export default function AboutTwo4() {
                 border: "1px solid #f0f0f0",
               }}
             >
-              <div className="row align-items-center">
+              <div className="row">
                 <div className="col-lg-4 col-md-5 col-sm-12 mb-4 mb-lg-0">
-                  <div className="section-image" style={{ textAlign: "center" }}>
+                  <div className="section-image" style={{ 
+                    textAlign: "center",
+                    paddingTop: "clamp(80px, 10vw, 70px)"
+                  }}>
                     <Image
                       width={300}
                       height={300}

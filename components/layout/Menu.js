@@ -26,18 +26,18 @@ export default function Menu() {
         </Link>
       </li>
 
-      {/* À propos */}
-      {/* <li
+      {/* Nos engagements */}
+      <li
         className="dropdown"
-        onMouseEnter={() => open(2)}
+        onMouseEnter={() => open(6)}
         onMouseLeave={close}
       >
-        <Link href="/a_propos" style={isActive('/a_propos')}>
-          À propos
+        <Link href="/engagement" style={isActive('/engagement')}>
+          Nos engagements
         </Link>
-      </li> */}
+      </li>
 
-      {/* Domaines D'interventions */}
+
       <li
         className="dropdown"
         onMouseEnter={() => open(3)}
@@ -88,16 +88,7 @@ export default function Menu() {
         </Link>
       </li>
 
-      {/* Nos engagements */}
-      <li
-        className="dropdown"
-        onMouseEnter={() => open(6)}
-        onMouseLeave={close}
-      >
-        <Link href="/engagement" style={isActive('/engagement')}>
-          Nos engagements
-        </Link>
-      </li>
+
 
       {/* Contact */}
       <li>
